@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlyLuy - Send Money Instantly</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/wallet.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+</head>
+<body>
+
+    <div id="loading-curtain" class="loading-curtain">
+        <div class="loader-content">
+            <div class="loader-status" id="loader-status">INITIALIZING SYSTEM</div>
+            <div class="loader-track">
+                <div class="loader-fill" id="loader-fill"></div>
+            </div>
+            <div class="loader-percent" id="loader-percent">0%</div>
+        </div>
+    </div>
+
+    <button id="global-hamburger" class="global-hamburger">
+        <span></span><span></span><span></span>
+    </button>
+
+    <nav id="fullscreen-nav" class="fullscreen-nav">
+        <ul>
+            <li><a href="#" data-text="HOME">HOME</a></li>
+            <li><a href="#" data-text="ABOUT">ABOUT</a></li>
+            <li><a href="#" data-text="FEATURES">FEATURES</a></li>
+            <li><a href="pricing.html" data-text="GET STARTED">GET STARTED</a></li>
+            <li><a href="#" data-text="CONTACT">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <div id="bg-layer-0" class="background-layer active bg-color-cream"></div>
+    <div id="bg-layer-1" class="background-layer bg-color-dark"></div>
+    <div id="bg-layer-2" class="background-layer bg-color-cream"></div>
+    <div id="bg-layer-3" class="background-layer bg-gradient-split"></div>
+    <div id="bg-layer-4" class="background-layer bg-color-dark"></div>
+
+    <section id="hero-section" class="hero-section" data-bg="0">
+        <div class="hero-background-text" id="hero-bg-text">ONLYLUY</div>
+        
+        <div id="rain-container" class="rain-container"></div>
+
+        <div class="wallet-stage" id="wallet-stage">
+            <model-viewer
+                id="wallet-3d-model"
+                class="wallet-3d-viewer"
+                src="/assets/wallet.glb"
+                alt="A 3D model of a leather wallet"
+                interaction-prompt="none"
+                auto-rotate
+                rotation-per-second="25deg"
+                camera-orbit="30deg 85deg 12m"
+                min-camera-orbit="auto auto 12m"
+                max-camera-orbit="auto auto 12m"
+                field-of-view="25deg"
+                shadow-intensity="1"
+            >
+            </model-viewer>
+        </div>
+        <a href="pricing.html" class="hero-get-started-btn">GET STARTED</a>
+    </section>
+
+    <section id="brand-partnerships" class="brand-partnerships">
+        <div class="brand-partnerships-box">
+            <p class="marquee-title">SUPPORTING GLOBAL LIQUIDITY PIPELINES</p>
+            <div class="marquee-anim-track">
+                <div class="partner-logo"><span></span>BRAND_ALPHA</div>
+                <div class="partner-logo"><span></span>BRAND_ALPHA</div>
+                <div class="partner-logo"><span></span>BRAND_ALPHA</div>
+                <div class="partner-logo"><span></span>BRAND_ALPHA</div>
+                <div class="partner-logo"><span></span>BRAND_ALPHA</div>
+                <div class="partner-logo"><span></span>BRAND_ALPHA</div>
+                <div class="partner-logo"><span></span>BRAND_ALPHA</div>
+                <div class="partner-logo"><span></span>BRAND_ALPHA</div>
+                <div class="partner-logo"><span></span>BRAND_ALPHA</div>
+                <div class="partner-logo"><span></span>BRAND_ALPHA</div>
+                <div class="partner-logo"><span></span>BRAND_ALPHA</div>
+                <div class="partner-logo"><span></span>BRAND_ALPHA</div>
+                <div class="partner-logo"><span></span>BRAND_ALPHA</div>
+                <div class="partner-logo"><span></span>BRAND_ALPHA</div>
+                <div class="partner-logo"><span></span>BRAND_ALPHA</div>
+                <div class="partner-logo"><span></span>BRAND_ALPHA</div>
+                <div class="partner-logo"><span></span>BRAND_ALPHA</div>
+                <div class="partner-logo"><span></span>BRAND_ALPHA</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="global-routing-system" class="global-routing-system" data-bg="2">
+        <div class="routing-split-box">
+            <div class="routing-text">
+                <div class="status-tag"><span class="pulse-dot"></span> ALWAYS ACTIVE</div>
+                <h2>Border-to-Border. <br>Wallet-to-Wallet.</h2>
+                <p class="routing-description">
+                    Traditional financial infrastructure forces your transactions through endless clearing holds and hidden conversion fees. OnlyLuy bypasses legacy banking routing loops entirely, enabling your digital assets to settle natively across multiple currencies instantly.
+                </p>
+            </div>
+            <div class="routing-visual-box">
+                <div class="random-terminal-box">
+                    <div class="terminal-bar">
+                        <span class="terminal-title">ONLYLUY // GLOBAL_ROUTER_V1</span>
+                        <div class="terminal-signals"><span class="signal-dot"></span><span class="signal-dot"></span></div>
+                    </div>
+                    <div class="currency-tab-interaction">
+                        <button class="currency-tabbing active" data-currency="usd">USD ($)</button>
+                        <button class="currency-tabbing" data-currency="khr">KHR (៛)</button>
+                        <button class="currency-tabbing" data-currency="eur">EUR (€)</button>
+                    </div>
+                    <div class="interactive-card-canvas">
+                        <div class="card-identity">
+                            <span class="card-label">CURRENT BALANCE</span>
+                            <div class="card-live-display" id="balance-display">$1450.00</div>
+                        </div>
+                        <div class="routing-matrix-box">
+                            <div class="routing-data-labels">
+                                <div class="data-row">
+                                    <span class="label-capital">Network:</span>
+                                    <span class="label-value" id="morph-network">OnlyLuy-Direct (US-East)</span>
+                                </div>
+                                <div class="data-row">
+                                    <span class="label-capital">Speed:</span>
+                                    <span class="label-value secure" id="morph-speed">0.02s Settlement</span>
+                                </div>
+                            </div>
+                            <div class="embedded-qr-interaction">
+                                <span class="qr-corner tl"></span><span class="qr-corner tr"></span>
+                                <span class="qr-corner bl"></span><span class="qr-corner br"></span>
+                                <div class="qr-center-pulse"></div>
+                            </div>
+                        </div>
+                        <div class="terminal-data-stream">
+                            <div class="stream-line" id="log-line-1">>> pipeline_status: verified_secure</div>
+                            <div class="stream-line" id="log-line-2">> holding_period: 0.00_seconds</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="roadmap-wrapper" class="roadmap-wrapper" data-bg="3">
+        <div class="roadmap-sticky">
+            <div class="roadmap-track">
+                <div class="progress-line-container">
+                    <div class="progress-line-fill" id="progress-fill"></div>
+                </div>
+
+                <div class="roadmap-step active" data-step="0">
+                    <div class="step-content">
+                        <h2>STEP 01 // SPEED</h2>
+                        <h3>QUANTUM<br>SETTLEMENT</h3>
+                        <p>No waiting periods. Your money moves instantly across the globe without hidden clearing house delays.</p>
+                        <span class="step-tag">0.02s</span> <span class="step-tag">DIRECT PIPELINE</span>
+                    </div>
+                    <div class="step-visual"><div class="vis-coin">$</div></div>
+                </div>
+
+                <div class="roadmap-step" data-step="1">
+                    <div class="step-content">
+                        <h2>STEP 02 // COST</h2>
+                        <h3>ZERO<br>HIDDEN FEES</h3>
+                        <p>What you see is what you send. Transparent pricing model that doesn't eat into your liquidity.</p>
+                        <span class="step-tag">100% TRANSPARENT</span> <span class="step-tag">NO CLEARING COST</span>
+                    </div>
+                    <div class="step-visual"><div class="vis-zero">0%</div></div>
+                </div>
+
+                <div class="roadmap-step" data-step="2">
+                    <div class="step-content">
+                        <h2>STEP 03 // SECURITY</h2>
+                        <h3>LAYER-Z<br>VAULT SECURITY</h3>
+                        <p>Verified secure pipelines holding your assets natively. Your wallet is cryptographically locked to you.</p>
+                        <span class="step-tag">VERIFIED SECURE</span> <span class="step-tag">ENCRYPTED</span>
+                    </div>
+                    <div class="step-visual"><div class="vis-shield"></div></div>
+                </div>
+
+                <div class="roadmap-step" data-step="3">
+                    <div class="step-content">
+                        <h2>STEP 04 // REACH</h2>
+                        <h3>BORDERLESS<br>MATRIX</h3>
+                        <p>Send and receive anywhere. Multiple currencies settling natively without legacy banking loops.</p>
+                        <span class="step-tag">GLOBAL</span> <span class="step-tag">NATIVE SETTLEMENT</span>
+                    </div>
+                    <div class="step-visual">
+                        <div class="vis-orbit">
+                            <div class="orbit-ring"></div><div class="orbit-ring"></div><div class="orbit-ring"></div><div class="orbit-core"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="testimonials-wrapper" class="testimonials-wrapper" data-bg="4">
+        <div class="testimonials-sticky">
+            <div class="testimonials-bg-orbs">
+                <div class="orb orb-1"></div>
+                <div class="orb orb-2"></div>
+                <div class="orb orb-3"></div>
+            </div>
+            <h2 class="testimonials-title">GLOBAL<br>FEEDBACK</h2>
+            <div class="testimonials-horizontal-track" id="testimonials-track">
+                <div class="testimonial-glass-card">
+                    <p class="testimonial-text">"OnlyLuy completely changed how we handle international payroll. What used to take 3 days now takes 3 seconds."</p>
+                    <div class="testimonial-author">- Sarah Jenkins, CFO at TechFlow</div>
+                </div>
+                <div class="testimonial-glass-card">
+                    <p class="testimonial-text">"The zero hidden fees feature is a game changer. My business margins have never looked better."</p>
+                    <div class="testimonial-author">- David Chen, Founder of GlobalImports</div>
+                </div>
+                <div class="testimonial-glass-card">
+                    <p class="testimonial-text">"I feel incredibly secure using this. The Layer-Z vault security gives me peace of mind I never had with traditional banks."</p>
+                    <div class="testimonial-author">- Maria Rodriguez, Freelance Designer</div>
+                </div>
+                <div class="testimonial-glass-card">
+                    <p class="testimonial-text">"Borderless matrix is right. I've sent money to 15 different countries this month without a single hitch."</p>
+                    <div class="testimonial-author">- Kenji Watanabe, E-commerce Owner</div>
+                </div>
+                <div class="testimonial-glass-card">
+                    <p class="testimonial-text">"The 3D wallet experience is unlike anything I've ever seen in finance. It makes managing money actually enjoyable."</p>
+                    <div class="testimonial-author">- Elena Petrova, Tech Reviewer</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="signup-footer" class="signup-footer" data-bg="4">
+        <div class="signup-bg-text">JOIN</div>
+        <div class="signup-content">
+            <span class="signup-tag">READY TO GO GLOBAL?</span>
+            <h2>STOP WAITING.<br><span>START SENDING.</span></h2>
+            <a href="pricing.html" class="signup-btn">CREATE FREE ACCOUNT</a>
+        </div>
+
+        <div class="footer-divider"></div>
+        
+        <div class="footer-links">
+            <a href="#">Home</a><a href="#">About</a><a href="#">Features</a><a href="pricing.html">Get Started</a><a href="#">Contact</a>
+        </div>
+        <div class="footer-copy">&copy; 2026 OnlyLuy. All rights reserved. Border-to-Border. Wallet-to-Wallet.</div>
+    </footer>
+
+    <script src="/js/wallet.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>
