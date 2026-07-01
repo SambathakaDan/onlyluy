@@ -38,9 +38,15 @@
     transition: 0.3s var(--ease); 
 }
 
-.global-hamburger.open span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
-.global-hamburger.open span:nth-child(2) { opacity: 0; }
-.global-hamburger.open span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+.global-hamburger.open span:nth-child(1) { 
+    transform: translateY(9px) rotate(45deg); 
+}
+.global-hamburger.open span:nth-child(2) { 
+    opacity: 0; 
+}
+.global-hamburger.open span:nth-child(3) { 
+    transform: translateY(-9px) rotate(-45deg); 
+}
 
 .fullscreen-nav {
     position: fixed; 
