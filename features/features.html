@@ -6,8 +6,24 @@
     <title>OnlyLuy</title>
     <link rel="stylesheet" href="features.css">
     <link rel="icon" type="image/jpg" href="assets/logo_onlyluy.png">
+    <link rel="stylesheet" href="/css/navbar.css">
+
+
 </head>
 <body>
+    <button id="global-hamburger" class="global-hamburger">
+        <span></span><span></span><span></span>
+    </button>
+
+    <nav id="fullscreen-nav" class="fullscreen-nav">
+        <ul>
+            <li><a href="/onlyluy/home.html" data-text="HOME">HOME</a></li>
+            <li><a href="#" data-text="ABOUT">ABOUT</a></li>
+            <li><a href="/features/features.html" data-text="FEATURES">FEATURES</a></li>
+            <li><a href="#" data-text="GET STARTED">GET STARTED</a></li>
+            <li><a href="#" data-text="CONTACT">CONTACT</a></li>
+        </ul>
+    </nav>
 
     <dialog id="auth-modal" class="modal-box">
         <button class="modal-close" onclick="document.getElementById('auth-modal').close()">&#10005;</button>

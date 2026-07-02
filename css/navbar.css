@@ -82,6 +82,7 @@
     transition: 0.4s var(--ease);
     display: inline-block; 
     position: relative;
+    text-decoration: none;
 }
 
 .fullscreen-nav a:hover { 

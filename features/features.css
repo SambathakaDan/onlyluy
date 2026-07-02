@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;500;600;700&display=swap');
 
+
+:root {
+    --bg-color: #F5F0E8;
+    --text-color: #111111;
+    --yellow: #FFD600;
+    --blue: #1E9FE8;
+    --orange: #F07800;
+    --black: #111111;
+    --ease: cubic-bezier(0.76, 0, 0.24, 1); 
+}
+
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
