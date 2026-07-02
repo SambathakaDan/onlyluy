@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlyLuy</title>
+    <link rel="stylesheet" href="features.css">
+    <link rel="icon" type="image/jpg" href="assets/logo_onlyluy.png">
+</head>
+<body>
+
+    <dialog id="auth-modal" class="modal-box">
+        <button class="modal-close" onclick="document.getElementById('auth-modal').close()">&#10005;</button>
+        <div class="modal-tabs">
+            <button class="modal-tab active" id="tab-signin" onclick="switchTab('signin')">Sign In</button>
+            <button class="modal-tab" id="tab-signup" onclick="switchTab('signup')">Sign Up</button>
+        </div>
+        <form id="form-signin" class="modal-form" method="dialog">
+            <h2>Welcome back.</h2>
+            <div class="yellow-bar" style="margin-bottom:1.5rem"></div>
+            <label>Email</label>
+            <input type="email" placeholder="you@example.com">
+            <label>Password</label>
+            <input type="password" placeholder="••••••••">
+            <button type="submit" class="modal-submit">Sign In</button>
+            <p class="modal-switch">No account? <span onclick="switchTab('signup')">Sign up for free</span></p>
+        </form>
+        <form id="form-signup" class="modal-form hidden" method="dialog">
+            <h2>Join OnlyLuy.</h2>
+            <div class="yellow-bar" style="margin-bottom:1.5rem"></div>
+            <label>Full Name</label>
+            <input type="text" placeholder="Your name">
+            <label>Email</label>
+            <input type="email" placeholder="you@example.com">
+            <label>Password</label>
+            <input type="password" placeholder="••••••••">
+            <button type="submit" class="modal-submit">Create Account</button>
+            <p class="modal-switch">Already have an account? <span onclick="switchTab('signin')">Sign in</span></p>
+        </form>
+    </dialog>
+
+    <main class="main-content">
+
+        <section id="introduction" class="introduction-section">
+            <div class="introduction-container">
+                <div class="introduction-text">
+                    <h1>Pay Smarter.<br>Move Money Faster.</h1>
+                    <div class="yellow-bar"></div>
+                    <p>OnlyLuy is a world-class payment platform made for everyone - from individuals to big enterprises. We offer security, efficiency, and unmatched financial freedom.</p>
+                    <div class="qr_download">
+                        <p class="qr-text">Scan to download.</p>
+                        <img src="assets/rickroll.png" alt="Scan to download.">
+                    </div>
+                </div>
+                <div class="introduction-image">
+                    <img src="assets/introduction_image.png" alt="OnlyLuy app on phone">
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-section">
+            <div class="stats-container">
+                <div class="stat-item"><h2>8B+</h2><p>Active users</p></div>
+                <div class="stat-item"><h2>$1T+</h2><p>Total transfers</p></div>
+                <div class="stat-item"><h2>101%</h2><p>Secure</p></div>
+            </div>
+        </section>
+
+        <section class="timeline-section">
+            <div class="timeline-intro">
+                <h2>What we offer</h2>
+                <h1>Everything you need</h1>
+            </div>
+            <div class="timeline-line"><div class="timeline-line-track"></div></div>
+
+            <div class="timeline-row">
+                <div class="timeline-card">
+                    <h4>01 — Payments</h4>
+                    <h2>Send &amp; receive in seconds</h2>
+                    <div class="yellow-bar"></div>
+                    <p>Pay anyone with just a phone number or QR code. Funds arrive instantly — no waiting, no friction.</p>
+                </div>
+                <div class="timeline-spacer"><div class="timeline-dot"></div></div>
+                <div class="timeline-image"><img src="assets/sendnreceive.jpg" alt="Send and receive payments"></div>
+            </div>
+
+            <div class="timeline-row reverse">
+                <div class="timeline-card">
+                    <h4>02 — Security</h4>
+                    <h2>Your money, fully protected</h2>
+                    <div class="yellow-bar"></div>
+                    <p>Bank-grade security baked into every transaction. 128-bit encryption and AI fraud detection keep your funds safe 24/7.</p>
+                </div>
+                <div class="timeline-spacer"><div class="timeline-dot"></div></div>
+                <div class="timeline-image"><img src="assets/moneyprotected.jpg" alt="Security shield"></div>
+            </div>
+
+            <div class="timeline-row">
+                <div class="timeline-card">
+                    <h4>03 — Wallet</h4>
+                    <h2>Your digital wallet, reimagined</h2>
+                    <div class="yellow-bar"></div>
+                    <p>Manage balances, link your bank accounts and cards, and track every transaction in one place.</p>
+                </div>
+                <div class="timeline-spacer"><div class="timeline-dot"></div></div>
+                <div class="timeline-image"><img src="assets/digitalwallet.png" alt="Digital wallet"></div>
+            </div>
+
+            <div class="timeline-row reverse">
+                <div class="timeline-card">
+                    <h4>04 — Business Tools</h4>
+                    <h2>Built for merchants too</h2>
+                    <div class="yellow-bar"></div>
+                    <p>Accept payments, issue invoices, and track sales — everything a growing business needs, right out of the box.</p>
+                </div>
+                <div class="timeline-spacer"><div class="timeline-dot"></div></div>
+                <div class="timeline-image"><img src="assets/online-merchant.jpg" alt="Business tools dashboard"></div>
+            </div>
+        </section>
+
+        <section class="subscription-section">
+            <div class="pricing-page">
+                <h1 class="font1 pricing-title">Go big or go home with our Pro version</h1>
+                <div class="option">
+                    <button id="btnmonth" class="click font2 active" onclick="setBilling('monthly')">Monthly</button>
+                    <button id="btnyear" class="click right font2" onclick="setBilling('yearly')">Yearly</button>
+                </div>
+                <div class="cards">
+                    <div class="version version1 font2">
+                        <div class="version-header">
+                            <div>
+                                <h3 class="font1">Free</h3>
+                                <p>For personal, basic usage</p><br>
+                                <span class="font1">Always Free</span>
+                            </div>
+                            <button class="noclick" onclick="openModal()">Get Started</button>
+                            <section>
+                                <ul class="features">Free Features:
+                                    <li>QR payments</li>
+                                    <li>Instant transfer</li>
+                                    <li>Full transaction history</li>
+                                    <li>Split bill</li>
+                                    <li>2FA login</li>
+                                    <li>End-to-end encryption</li>
+                                    <li>Basic fraud detection</li>
+                                    <li>Linked cards and bank</li>
+                                    <li>Statements (90days)</li>
+                                    <li>Savings pocket</li>
+                                    <li>Payment links</li>
+                                    <li>Basic invoicing</li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+
+                    <div class="version version2">
+                        <div class="theone font1">MOST POPULAR</div>
+                        <div class="version-header font2">
+                            <div>
+                                <h3 class="font1">Pro</h3>
+                                <p>For professional, heavy usage</p><br>
+                                <span class="font1" id="pro-price">8$/Month</span>
+                            </div>
+                            <button class="noclick font2" onclick="openModal()">Start Trial</button>
+                            <section>
+                                <ul class="features font2">Free Features, plus:
+                                    <li>Scheduled payments</li>
+                                    <li>5% cashback on $100+</li>
+                                    <li>Higher transfer limit</li>
+                                    <li>Buyer protection</li>
+                                    <li>Crypto wallet &amp; transfers</li>
+                                    <li>AI financial supervisor</li>
+                                    <li>Advanced spending reports</li>
+                                    <li>Smart spend alerts</li>
+                                    <li>Multi-currency wallet</li>
+                                    <li>Stock investing</li>
+                                    <li>Checkout payments</li>
+                                    <li>Sales dashboard</li>
+                                    <li>Priority support</li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+
+                    <div class="version version3">
+                        <div class="version-header font2">
+                            <div>
+                                <h3 class="font1">Enterprise</h3>
+                                <p>For large businesses/companies</p><br>
+                                <span class="font1">Start at 20$/ Month</span>
+                            </div>
+                            <button class="noclick font2" onclick="openModal()">Contact Sales</button>
+                            <section>
+                                <ul class="features font2">Pro Features, Plus:
+                                    <li>Bulk payouts</li>
+                                    <li>International transfers</li>
+                                    <li>Advanced fraud alerts</li>
+                                    <li>Compliance reporting</li>
+                                    <li>Role-based access control</li>
+                                    <li>AI financial supervisor+</li>
+                                    <li>Custom report builder</li>
+                                    <li>API access</li>
+                                    <li>3rd-party integrations</li>
+                                    <li>Team &amp; sub-accounts</li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sign-up">
+            <h4>Get Started</h4>
+            <h1>Ready to move and secure money the smart way?</h1>
+            <h3>Join over 8 billion users who uses OnlyLuy</h3>
+            <a class="cta-button" href="#" onclick="openModal();return false;">
+                Create your free account
+                <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </a>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
