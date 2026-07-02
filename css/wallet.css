@@ -92,7 +92,7 @@
 
 @media (max-width: 768px) {
     .wallet-stage {
-        width: 350px;
+        width: 500px;
         height: 350px;
     }
     .hero-get-started-btn {
