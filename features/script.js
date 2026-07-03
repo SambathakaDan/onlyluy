@@ -12,7 +12,7 @@ function switchTab(tab) {
 function setBilling(type) {
     document.getElementById('btnmonth').classList.toggle('active', type === 'monthly');
     document.getElementById('btnyear').classList.toggle('active', type === 'yearly');
-    document.getElementById('pro-price').textContent = type === 'yearly' ? '6$/Month' : '8$/Month';
+    document.getElementById('pro-price').textContent = type === 'yearly' ? '6$/Month(25% off)' : '8$/Month';
 }
 
 const hamburger = document.getElementById('global-hamburger');
