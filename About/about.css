@@ -1,0 +1,279 @@
+:root {
+    --bg-color: #F5F0E8;
+    --text-color: #111111;
+    --yellow: #FFD600;
+    --blue: #1E9FE8;
+    --orange: #F07800;
+    --black: #111111;
+    --ease: cubic-bezier(0.76, 0, 0.24, 1); 
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #333333;
+  background-color: #F5F0E8;
+}
+
+a {
+  text-decoration: none;
+  color: #333333;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+header {
+  background-color: #FFD600;
+  border-bottom: 1px solid #F07800;
+  padding: 15px 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+.nav-links a:hover,
+.nav-links a {
+  margin-left: 20px;
+  font-size: 16px;
+}
+
+.nav-links a.active {
+  color: #2D6CDF;
+  font-weight: bold;
+}
+
+
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.hero .tag {
+  background-color: #EAF1FE;
+  color: #2D6CDF;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin: 15px 0;
+}
+
+.hero h1 span {
+  color: #2D6CDF;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 0 auto;
+  color: #666666;
+}
+
+
+.stats {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border-bottom: 1px solid #dddddd;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+}
+
+.stat-item {
+  margin: 0 30px;
+}
+
+.stat-item h2 {
+  color: #2D6CDF;
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+.stat-item p {
+  color: #666666;
+  margin: 0;
+}
+
+
+.section {
+  padding: 40px 20px;
+  border-bottom: 1px solid #dddddd;
+}
+
+.section-head {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+}
+
+.section-head .tag {
+  background-color: #1E9FE8;
+  color: #ffffff;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.section-head h2 {
+  font-size: 26px;
+  margin: 10px 0;
+}
+
+.section-head p {
+  color: #666666;
+}
+
+
+.goals {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.goal-card {
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 200px;
+  margin: 10px;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.goal-card:hover {
+  box-shadow: 0 8px 24px rgba(45, 108, 223, 0.12);
+  transform: translateY(-4px);
+}
+
+.goal-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #EAF1FE;
+  color: #2D6CDF;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 10px;
+  margin: 0 auto 10px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.goal-card h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.goal-card p {
+  color: #666666;
+  font-size: 14px;
+}
+
+
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.team-card {
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 180px;
+  margin: 10px;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.team-card:hover {
+  box-shadow: 0 8px 24px rgba(45, 108, 223, 0.12);
+  transform: translateY(-4px);
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  background-color: #EAF1FE;
+  color: #2D6CDF;
+  font-weight: bold;
+  font-size: 22px;
+  border-radius: 50%;
+  margin: 0 auto 10px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-card h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.team-card {
+  display: block;
+  color: #2D6CDF;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.team-card p {
+  color: #666666;
+  font-size: 13px;
+}
+
+
+.faq-list {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+details {
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 15px 20px;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.faq-body {
+  color: #666666;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #666666;
+  font-size: 14px;
+}
