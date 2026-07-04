@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlyLuy Pricing | Transparent Plans for Digital Wallets & Crypto</title>
+    <meta name="description" content="Choose the perfect OnlyLuy plan for your digital finance needs. Transparent pricing, no hidden fees. Start free and upgrade for AI budgeting, crypto swaps, and business tools.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/pricing/pricing.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <button class="menu-trigger" id="menuBtn" aria-label="Open Menu">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="fullscreen-menu" id="fullMenu">
+            <button class="nav-close-btn" id="navCloseBtn" aria-label="Close Menu"></button>
+            <ul>
+                <li><a href="/onlyluy/home.html" data-text="HOME">Home</a></li>
+                <li><a href="/About/about.html" data-text="ABOUT">About</a></li>
+                <li class="has-dropdown" id="featuresDropdown">
+                    <a href="#" data-text="FEATURES >">Features ></a>
+                    <ul class="submenu">
+                        <li><a href="\features\send-and-receives\s&r.html" data-text="SEND & RECEIVE">Send & Receive</a></li>
+                        <li><a href="\features\payment-method\pm.html" data-text="WAYS TO PAY">Ways to Pay</a></li>
+                        <li><a href="\features\for-business\fb.html" data-text="FOR BUSINESSES">For Businesses</a></li>
+                    </ul>
+                </li>
+                <li><a href="/pricing/pricing.html" data-text="GET STARTED">Get Started</a></li>
+                <li><a href="#" data-text="CONTACT">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<main>
+    <section class="hero-area">
+        <h1>PRICING THAT SCALES</h1>
+        <p>Simple, transparent pricing for individuals and businesses. No hidden fees, no surprises.</p>
+        <div class="toggle-box">
+            <span style="font-weight: 800;">Monthly</span>
+            <div class="switch" id="priceToggle">
+                <div class="knob"></div>
+            </div>
+            <span style="font-weight: 800;">Yearly</span>
+            <span class="save-tag">Save 20%</span>
+        </div>
+    </section>
+
+    <section class="plans-grid">
+        <article class="plan-card">
+            <h2>STARTER</h2>
+            <div class="price-tag" data-m="$0" data-y="$0">$0</div>
+            <div class="billing-type">Free Forever</div>
+            <ul class="feature-checklist">
+                <li>Personal Wallet</li>
+                <li>Send & Receive</li>
+                <li>QR Payments</li>
+                <li>AI Spending Overview</li>
+                <li>Secure Authentication</li>
+                <li>Crypto Wallet (View Only)</li>
+            </ul>
+            <a href="javascript:void(0)" class="plan-btn modal-trigger">Get Started Free</a>
+        </article>
+
+        <article class="plan-card highlight-card">
+            <h2>TRIAL</h2>
+            <div class="price-tag" data-m="$0" data-y="$0">$0</div>
+            <div class="billing-type" id="proBilling">14-Day Free Trial</div>
+            <ul class="feature-checklist">
+                <li>Everything in Starter</li>
+                <li>Unlimited Transfers</li>
+                <li>AI Budget Assistant</li>
+                <li>Natural Language Payments</li>
+                <li>Crypto Cross-Chain Swaps</li>
+                <li>Smart Notifications</li>
+                <li>Priority Support</li>
+                <li>Claude MCP Integration</li>
+            </ul>
+            <a href="javascript:void(0)" class="plan-btn modal-trigger">Start Free Trial</a>
+        </article>
+
+        <article class="plan-card">
+            <h2>BUSINESS</h2>
+            <div class="price-tag" data-m="$49.99" data-y="$39.99">$49.99</div>
+            <div class="billing-type" id="bizBilling">per month</div>
+            <ul class="feature-checklist">
+                <li>Everything in Trial</li>
+                <li>Invoices & Payroll</li>
+                <li>Analytics Dashboard</li>
+                <li>Cash Flow Prediction</li>
+                <li>API Access</li>
+                <li>Team Accounts</li>
+                <li>Crypto Treasury Management</li>
+            </ul>
+            <a href="javascript:void(0)" class="plan-btn modal-trigger">Contact Sales</a>
+        </article>
+    </section>
+
+    <section class="compare-section">
+        <h2>COMPARE FEATURES</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Feature</th>
+                    <th>Starter</th>
+                    <th>Trial</th>
+                    <th>Business</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Send & Receive Fiat</td>
+                    <td>✔</td>
+                    <td>✔</td>
+                    <td>✔</td>
+                </tr>
+                <tr>
+                    <td>Crypto Swaps</td>
+                    <td>—</td>
+                    <td>✔</td>
+                    <td>✔</td>
+                </tr>
+                <tr>
+                    <td>AI Budget Assistant</td>
+                    <td>—</td>
+                    <td>✔</td>
+                    <td>✔</td>
+                </tr>
+                <tr>
+                    <td>API Access</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>✔</td>
+                </tr>
+                <tr>
+                    <td>Team Accounts</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>✔</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</main>
+
+<div class="auth-modal-overlay" id="authModalOverlay">
+    <div class="auth-modal" id="authModal">
+        <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close"></button>
+        <h2 id="modalTitle">CREATE ACCOUNT</h2>
+        <p class="modal-subtitle">Join OnlyLuy in seconds. No credit card required.</p>
+        <form class="auth-form" onsubmit="event.preventDefault(); alert('Account created! (Demo)');">
+            <input type="email" placeholder="Email Address" required>
+            <input type="password" placeholder="Create Password" required>
+            <button type="submit" class="modal-submit-btn">CONTINUE</button>
+        </form>
+        <div class="auth-divider"><span>OR</span></div>
+        <button class="social-auth-btn">Continue with Google</button>
+        <button class="social-auth-btn">Continue with Apple</button>
+        <p class="auth-tos">By continuing, you agree to our Terms and Privacy Policy.</p>
+    </div>
+</div>
+
+<footer class="ftg-footer">
+    <h2>STOP WAITING.<br><span>START SENDING.</span></h2>
+    <a href="javascript:void(0)" class="ftg-footer-btn modal-trigger">CREATE FREE ACCOUNT</a>
+    <div class="ftg-footer-line"></div>
+    <nav class="ftg-footer-nav">
+        <a href="/onlyluy/home.html">Home</a>
+        <a href="/About/about.html">About</a>
+        <a href="/features/index.html">Features</a>
+        <a href="/pricing/pricing.html">Pricing</a>
+        <a href="#">Contact</a>
+    </nav>
+    <p class="ftg-copy">&copy; 2026 OnlyLuy. All rights reserved. Border-to-Border. Wallet-to-Wallet.</p>
+</footer>
+
+<script src="/js/smooth-scroll.js"></script>
+<script src="/js/nav.js"></script>
+<script src="/pricing/pricing.js"></script>
+
+</body>
+</html>

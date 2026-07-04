@@ -27,19 +27,29 @@
         </div>
     </div>
 
-    <button id="global-hamburger" class="global-hamburger">
-        <span></span><span></span><span></span>
-    </button>
+    <header class="site-header">
+        <button class="menu-trigger" id="menuBtn" aria-label="Open Menu">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="fullscreen-menu" id="fullMenu">
+            <button class="nav-close-btn" id="navCloseBtn" aria-label="Close Menu"></button>
+            <ul>
+                <li><a href="/onlyluy/home.html" data-text="HOME">Home</a></li>
+                <li><a href="/About/about.html" data-text="ABOUT">About</a></li>
+                <li class="has-dropdown" id="featuresDropdown">
+                    <a href="#" data-text="FEATURES >">Features ></a>
+                    <ul class="submenu">
+                        <li><a href="\features\send-and-receives\s&r.html" data-text="SEND & RECEIVE">Send & Receive</a></li>
+                        <li><a href="\features\payment-method\pm.html" data-text="WAYS TO PAY">Ways to Pay</a></li>
+                        <li><a href="\features\for-business\fb.html" data-text="FOR BUSINESSES">For Businesses</a></li>
+                    </ul>
+                </li>
+                <li><a href="/pricing/pricing.html" data-text="GET STARTED">Get Started</a></li>
+                <li><a href="#" data-text="CONTACT">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <nav id="fullscreen-nav" class="fullscreen-nav">
-        <ul>
-            <li><a href="/onlyluy/home.html" data-text="HOME">HOME</a></li>
-            <li><a href="/About/about.html" data-text="ABOUT">ABOUT</a></li>
-            <li><a href="/features/features.html" data-text="FEATURES">FEATURES</a></li>
-            <li><a href="pricing.html" data-text="GET STARTED">GET STARTED</a></li>
-            <li><a href="#" data-text="CONTACT">CONTACT</a></li>
-        </ul>
-    </nav>
 
     <div id="bg-layer-0" class="background-layer active bg-color-cream"></div>
     <div id="bg-layer-1" class="background-layer bg-color-dark"></div>
@@ -111,7 +121,7 @@
                 <div class="random-terminal-box">
                     <div class="terminal-bar">
                         <span class="terminal-title">ONLYLUY // GLOBAL_ROUTER_V1</span>
-                        <div class="terminal-signals"><span class="signal-dot"></span><span class="signal-dot"></span></div>
+                        <div class="terminal-signals"><span class="signal-dot"></span><span class="signal-dot"></span><span class="signal-dot"></span></div>
                     </div>
                     <div class="currency-tab-interaction">
                         <button class="currency-tabbing active" data-currency="usd">USD ($)</button>
@@ -253,8 +263,10 @@
         </div>
         <div class="footer-copy">&copy; 2026 OnlyLuy. All rights reserved. Border-to-Border. Wallet-to-Wallet.</div>
     </footer>
-
+    <script src="/js/nav.js"></script>
+    <script src="/js/loader.js"></script>
     <script src="/js/wallet.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/smooth-scroll.js"></script>
 </body>
 </html>

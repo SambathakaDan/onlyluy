@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send & Receive Money Instantly | OnlyLuy Digital Wallet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/features/send-and-receives/s&r.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+
+</head>
+<body>
+    <header class="site-header">
+        <button class="menu-trigger" id="menuBtn" aria-label="Open Menu">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="fullscreen-menu" id="fullMenu">
+            <button class="nav-close-btn" id="navCloseBtn" aria-label="Close Menu"></button>
+            <ul>
+                <li><a href="/onlyluy/home.html" data-text="HOME">Home</a></li>
+                <li><a href="/About/about.html" data-text="ABOUT">About</a></li>
+                <li class="has-dropdown" id="featuresDropdown">
+                    <a href="#" data-text="FEATURES >">Features ></a>
+                    <ul class="submenu">
+                        <li><a href="\features\send-and-receives\s&r.html" data-text="SEND & RECEIVE">Send & Receive</a></li>
+                        <li><a href="\features\payment-method\pm.html" data-text="WAYS TO PAY">Ways to Pay</a></li>
+                        <li><a href="\features\for-business\fb.html" data-text="FOR BUSINESSES">For Businesses</a></li>
+                    </ul>
+                </li>
+                <li><a href="/pricing/pricing.html" data-text="GET STARTED">Get Started</a></li>
+                <li><a href="#" data-text="CONTACT">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <section class="ftg-hero">
+            <h1>MOVE MONEY IN SECONDS</h1>
+            <p>Experience the freedom of instant global transfers.</p>
+        </section>
+
+        <section class="ftg-block">
+            <h2>INSTANT TRANSFERS</h2>
+            <p>Network lines zapping across the globe in a blink of an eye.</p>
+            <div class="ftg-map" id="ftg-map">
+                <div class="ftg-map-bg"></div>
+                <svg class="ftg-map-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <line x1="25" y1="38" x2="47" y2="30" />
+                    <line x1="25" y1="38" x2="82" y2="40" />
+                    <line x1="25" y1="38" x2="30" y2="65" />
+                    <line x1="25" y1="38" x2="80" y2="70" />
+                    <line x1="47" y1="30" x2="82" y2="40" />
+                    <line x1="47" y1="30" x2="30" y2="65" />
+                    <line x1="47" y1="30" x2="80" y2="70" />
+                    <line x1="82" y1="40" x2="30" y2="65" />
+                    <line x1="82" y1="40" x2="80" y2="70" />
+                    <line x1="30" y1="65" x2="80" y2="70" />
+                </svg>
+            </div>
+        </section>
+
+        <section class="ftg-block">
+            <h2>INSTANT RECEIVING</h2>
+            <p>Get paid from anywhere in the world. Share your unique OnlyLuy handle or QR code and receive funds in seconds, not days.</p>
+            <figure class="ftg-img-box">
+                <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Happy person receiving money on phone">
+                <figcaption class="ftg-img-overlay">
+                    <h3>RECEIVE FUNDS INSTANTLY</h3>
+                    <p>Smile when the notification hits. Your money, available immediately.</p>
+                </figcaption>
+            </figure>
+        </section>
+
+        <section class="ftg-block">
+            <h2>CROSS-CHAIN CRYPTO</h2>
+            <p>A complete trading dashboard. Watch the markets move.</p>
+            <div class="ftg-dash">
+                <aside class="ftg-dash-side">
+                    <div class="ftg-dash-coin">BTC <span>+2.4%</span></div>
+                    <div class="ftg-dash-coin">ETH <span>+1.8%</span></div>
+                    <div class="ftg-dash-coin">USDT <span>0.0%</span></div>
+                    <div class="ftg-dash-coin">LTC <span>-0.5%</span></div>
+                    <div class="ftg-dash-coin">SOL <span>+5.2%</span></div>
+                </aside>
+                <div class="ftg-dash-main">
+                    <div class="ftg-dash-title">BTC / USDT</div>
+                    <div class="ftg-dash-chart">
+                        <div class="ftg-candle green" style="animation-delay: 0s; height: 40%;"></div>
+                        <div class="ftg-candle" style="animation-delay: 0.2s; height: 60%;"></div>
+                        <div class="ftg-candle green" style="animation-delay: 0.4s; height: 80%;"></div>
+                        <div class="ftg-candle" style="animation-delay: 0.6s; height: 30%;"></div>
+                        <div class="ftg-candle green" style="animation-delay: 0.8s; height: 50%;"></div>
+                        <div class="ftg-candle" style="animation-delay: 1s; height: 70%;"></div>
+                        <div class="ftg-candle green" style="animation-delay: 1.2s; height: 90%;"></div>
+                        <div class="ftg-candle" style="animation-delay: 1.4s; height: 40%;"></div>
+                        <div class="ftg-candle green" style="animation-delay: 1.6s; height: 60%;"></div>
+                    </div>
+                </div>
+                <aside class="ftg-dash-book">
+                    <div class="ftg-ob-row red">102.5 | 0.12</div>
+                    <div class="ftg-ob-row red">102.4 | 0.45</div>
+                    <div class="ftg-ob-row red">102.3 | 1.20</div>
+                    <div class="ftg-ob-row white">--- 102.1 ---</div>
+                    <div class="ftg-ob-row green">101.9 | 0.88</div>
+                    <div class="ftg-ob-row green">101.8 | 0.34</div>
+                    <div class="ftg-ob-row green">101.7 | 2.10</div>
+                </aside>
+            </div>
+        </section>
+
+        <section class="ftg-block">
+            <h2>SECURE & RECURRING</h2>
+            <p>Unmatched security in the fintech competition.</p>
+            <div class="ftg-sec-chart">
+                <div class="ftg-sec-bar onlyluy">95%</div>
+                <div class="ftg-sec-bar comp1">60%</div>
+                <div class="ftg-sec-bar comp2">40%</div>
+            </div>
+            <div class="ftg-sec-labels">
+                <div>ONLYLUY</div>
+                <div>PAYPAL</div>
+                <div>PAYONEER</div>
+            </div>
+        </section>
+
+        <section class="ftg-chat-wrapper">
+            <div class="ftg-chat-sticky">
+                <h2 class="ftg-chat-title">AI SMART TRANSFERS</h2>
+                <div class="ftg-chat-bubble ftg-chat-user" id="chat-1">Send $20 in Bitcoin to John every Friday.</div>
+                <div class="ftg-chat-bubble ftg-chat-ai" id="chat-2">Initiating cross-chain swap. Gas fees optimized.</div>
+                <div class="ftg-chat-bubble ftg-chat-user" id="chat-3">Approve transaction.</div>
+                <div class="ftg-chat-bubble ftg-chat-ai" id="chat-4">Transfer complete. Receipt saved.</div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="ftg-footer">
+        <h2>STOP WAITING.<br><span>START SENDING.</span></h2>
+        <a href="../pricing.html" class="ftg-footer-btn">CREATE FREE ACCOUNT</a>
+        <div class="ftg-footer-line"></div>
+        <nav class="ftg-footer-nav">
+            <a href="../home.html">Home</a>
+            <a href="../about.html">About</a>
+            <a href="index.html">Features</a>
+            <a href="../pricing.html">Pricing</a>
+            <a href="../contact.html">Contact</a>
+        </nav>
+        <p class="ftg-copy">&copy; 2026 OnlyLuy. All rights reserved. Border-to-Border. Wallet-to-Wallet.</p>
+    </footer>
+
+    <script src="/features/send-and-receives/s&r.js"></script>
+    <script src="/js/nav.js"></script>
+    <script src="/js/smooth-scroll.js"></script>
+
+</body>
+</html>

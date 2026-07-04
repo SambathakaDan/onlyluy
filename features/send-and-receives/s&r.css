@@ -1,0 +1,534 @@
+:root {
+    --bg-color: #F5F0E8;
+    --text-color: #111111;
+    --yellow: #FFD600;
+    --blue: #1E9FE8;
+    --orange: #F07800;
+    --black: #111111;
+    --ease: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Nunito', sans-serif;
+    overflow-x: hidden;
+    line-height: 1.5;
+}
+
+h1, h2, h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 2px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.ftg-nav {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 30px 5%;
+    background-color: transparent;
+}
+
+.ftg-nav a {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    color: var(--text-color);
+    transition: color 0.3s var(--ease);
+}
+
+.ftg-nav a:hover,
+.ftg-nav a.active {
+    color: var(--orange);
+}
+
+.ftg-hero {
+    padding: 160px 5% 80px;
+    text-align: center;
+}
+
+.ftg-hero h1 {
+    font-size: 5rem;
+    line-height: 1;
+    margin-bottom: 20px;
+    animation: ftgFadeUp 1s var(--ease);
+}
+
+.ftg-hero p {
+    font-size: 1.2rem;
+    color: #444;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+@keyframes ftgFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.ftg-block {
+    padding: 80px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.ftg-block h2 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.ftg-block p {
+    color: #444;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+}
+
+.ftg-map {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background: #000000;
+    border-radius: 30px;
+    overflow: hidden;
+    margin-top: 40px;
+    border: 1px solid #222;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+.ftg-map-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/World_map_-_low_resolution.svg/2000px-World_map_-_low_resolution.svg.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
+    filter: invert(1);
+}
+
+.ftg-map-svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.ftg-map-svg line {
+    stroke: rgba(30, 159, 232, 0.4);
+    stroke-width: 1;
+    vector-effect: non-scaling-stroke;
+}
+
+.ftg-map-node {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: var(--yellow);
+    border-radius: 50%;
+    box-shadow: 0 0 15px var(--yellow);
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.ftg-zap {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--blue);
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+.ftg-img-box {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    height: 400px;
+    border-radius: 30px;
+    overflow: hidden;
+    margin: 40px auto 0;
+    box-shadow: 0px 15px 40px rgba(0,0,0,0.15);
+    border: 4px solid #fff;
+}
+
+.ftg-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s var(--ease);
+}
+
+.ftg-img-box:hover img {
+    transform: scale(1.05);
+}
+
+.ftg-img-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+}
+
+.ftg-img-overlay h3 {
+    font-size: 2.5rem;
+    color: var(--yellow);
+    margin-bottom: 5px;
+}
+
+.ftg-dash {
+    background: #0f0f0f;
+    border-radius: 20px;
+    padding: 30px;
+    margin-top: 40px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    gap: 20px;
+    height: 400px;
+}
+
+.ftg-dash-side {
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.ftg-dash-coin {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 800;
+    font-size: 0.9rem;
+    color: #fff;
+}
+
+.ftg-dash-coin span {
+    color: #2ecc71;
+    font-size: 0.8rem;
+}
+
+.ftg-dash-main {
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.ftg-dash-title {
+    color: #fff;
+    margin-bottom: 15px;
+    font-family: 'Bebas Neue';
+    font-size: 1.5rem;
+}
+
+.ftg-dash-chart {
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding-bottom: 20px;
+}
+
+.ftg-candle {
+    width: 15px;
+    background: #e74c3c;
+    animation: ftgCandle 2s infinite ease-in-out;
+    position: relative;
+}
+
+.ftg-candle.green {
+    background: #2ecc71;
+}
+
+.ftg-candle::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 120%;
+    background: inherit;
+    left: 50%;
+    top: -10%;
+    transform: translateX(-50%);
+}
+
+@keyframes ftgCandle {
+    0%, 100% {
+        height: 20%;
+    }
+    50% {
+        height: 80%;
+    }
+}
+
+.ftg-dash-book {
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 20px;
+    font-size: 0.8rem;
+    color: #ccc;
+    font-family: monospace;
+    overflow: hidden;
+}
+
+.ftg-ob-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.ftg-ob-row.red {
+    color: #e74c3c;
+}
+
+.ftg-ob-row.green {
+    color: #2ecc71;
+}
+
+.ftg-ob-row.white {
+    color: #fff;
+}
+
+.ftg-sec-chart {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 300px;
+    margin-top: 30px;
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.ftg-sec-bar {
+    width: 20%;
+    background: #ddd;
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    color: #fff;
+    font-weight: 800;
+    padding-bottom: 10px;
+}
+
+.ftg-sec-bar.onlyluy {
+    background: var(--orange);
+    height: 95%;
+}
+
+.ftg-sec-bar.comp1 {
+    background: #999;
+    height: 60%;
+}
+
+.ftg-sec-bar.comp2 {
+    background: #999;
+    height: 40%;
+}
+
+.ftg-sec-labels {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+    font-weight: 800;
+}
+
+.ftg-chat-wrapper {
+    height: 400vh;
+    position: relative;
+}
+
+.ftg-chat-sticky {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.ftg-chat-title {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    position: absolute;
+    top: 20%;
+}
+
+.ftg-chat-bubble {
+    max-width: 60%;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s var(--ease);
+    font-weight: 600;
+    position: absolute;
+}
+
+.ftg-chat-bubble.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.ftg-chat-user {
+    background: var(--black);
+    color: var(--bg-color);
+    align-self: flex-end;
+    border-bottom-right-radius: 5px;
+    right: 10%;
+}
+
+.ftg-chat-ai {
+    background: var(--yellow);
+    color: var(--black);
+    align-self: flex-start;
+    border-bottom-left-radius: 5px;
+    left: 10%;
+}
+
+#chat-1 {
+    top: 35%;
+}
+
+#chat-2 {
+    top: 50%;
+}
+
+#chat-3 {
+    top: 65%;
+}
+
+#chat-4 {
+    top: 80%;
+}
+
+.ftg-footer {
+    color: var(--bg-color);
+    padding: 100px 5% 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    background-color: var(--black);
+}
+
+.ftg-footer h2 {
+    font-size: 5rem;
+    line-height: 0.9;
+    margin-bottom: 30px;
+}
+
+.ftg-footer h2 span {
+    color: var(--orange);
+}
+
+.ftg-footer-btn {
+    display: inline-block;
+    background: var(--bg-color);
+    color: var(--black);
+    padding: 20px 60px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    border-radius: 50px;
+    transition: all 0.3s var(--ease);
+    box-shadow: 0 10px 0 var(--orange);
+}
+
+.ftg-footer-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 0 var(--orange);
+}
+
+.ftg-footer-line {
+    width: 100%;
+    height: 1px;
+    background: #333;
+    margin: 80px 0 40px;
+}
+
+.ftg-footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.ftg-footer-nav a {
+    color: var(--bg-color);
+    font-weight: 600;
+    transition: 0.3s var(--ease);
+}
+
+.ftg-footer-nav a:hover {
+    color: var(--orange);
+}
+
+.ftg-copy {
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .ftg-nav {
+        gap: 20px;
+        padding: 20px 5%;
+    }
+    .ftg-hero h1 {
+        font-size: 3rem;
+    }
+    .ftg-dash {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+    .ftg-dash-side, 
+    .ftg-dash-book {
+        display: none;
+    }
+    .ftg-chat-wrapper {
+        height: 300vh;
+    }
+    .ftg-chat-bubble {
+        max-width: 80%;
+        left: 10% !important;
+        right: 10% !important;
+    }
+}

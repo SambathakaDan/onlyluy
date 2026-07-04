@@ -6,6 +6,7 @@
     --orange: #F07800;
     --black: #111111;
     --ease: cubic-bezier(0.76, 0, 0.24, 1); 
+    --green: #639a3c;
 }
 
 * {
@@ -722,6 +723,7 @@ ul {
     will-change: transform;
     z-index: 2;
     position: relative;
+    transition: transform 0.5s var(--ease);
 }
 .testimonial-glass-card:first-child {
     margin-left: 10vw;
