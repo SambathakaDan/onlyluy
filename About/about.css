@@ -406,7 +406,6 @@ ul {
     margin-top: 20px; 
 }
 
-/* Media Queries for Tablet/Mobile Cleanups */
 @media (max-width: 768px) {
     .about-hero {
         padding: 120px 5% 40px;

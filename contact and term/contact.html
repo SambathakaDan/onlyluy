@@ -4,9 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="contact-style.css">
+    <link rel="stylesheet" href="/contact and term/contact-style.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+
 </head>
 <body>
+    <header class="site-header">
+        <button class="menu-trigger" id="menuBtn" aria-label="Open Menu">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="fullscreen-menu" id="fullMenu">
+            <button class="nav-close-btn" id="navCloseBtn" aria-label="Close Menu"></button>
+            <ul>
+                <li><a href="/onlyluy/home.html" data-text="HOME">Home</a></li>
+                <li><a href="/About/about.html" data-text="ABOUT">About</a></li>
+                <li><a href="/features/features.html" data-text="GET STARTED">Get Started</a></li>
+                <li><a href="/contact and term/contact.html" data-text="CONTACT">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <section class="contact-header">
         <div class="particles" id="particles"></div>
         <p class="hero-eyebrow">Support &amp; Sales</p>
@@ -78,6 +95,8 @@
         <p class="term footer-copy">&copy; 2026 OnlyLuy. All rights reserved.</p>
       </div>
     </footer>
-    <script src="contact-script.js"></script>
+    <script src="/contact and term/contact-script.js"></script>
+    <script src="/js/nav.js"></script>
+    <script src="/js/smooth-scroll.js"></script>
 </body>
 </html>

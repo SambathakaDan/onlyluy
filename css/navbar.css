@@ -44,7 +44,6 @@
     transition: transform 0.3s ease, opacity 0.3s ease; 
 }
 
-/* Active Hamburger Transformation Matrix Rules */
 .menu-trigger.open span:nth-child(1) { 
     transform: translateY(9px) rotate(45deg); 
 }
@@ -58,7 +57,6 @@
 }
 
 
-/* --- FULLSCREEN NAVIGATION DRAWER OVERLAY --- */
 .fullscreen-menu { 
     position: fixed; 
     top: 0; 
@@ -134,26 +132,7 @@
     overflow: hidden; 
 }
 
-.has-dropdown { 
-    cursor: pointer; 
-}
 
-
-.submenu { 
-    display: none; 
-    padding-left: 40px; 
-    margin-top: 15px; 
-}
-
-.has-dropdown.open .submenu { 
-    display: block; 
-    animation: fadeDown 0.3s ease forwards; 
-}
-
-.submenu li { 
-    margin: 15px 0; 
-    overflow: hidden; 
-}
 
 @keyframes fadeDown { 
     from { opacity: 0; transform: translateY(-10px); } 
@@ -177,18 +156,14 @@
     line-height: 1.1;
 }
 
-.submenu a { 
-    font-size: clamp(1.5rem, 4vw, 2.5rem); 
-    line-height: 1.2;
-}
 
-.fullscreen-menu a:hover, .submenu a:hover { 
+.fullscreen-menu a:hover { 
     color: #FFD600; 
     -webkit-text-stroke: 0px transparent; 
     transform: translateX(20px); 
 }
 
-.fullscreen-menu a::before, .submenu a::before { 
+.fullscreen-menu a::before { 
     content: attr(data-text); 
     position: absolute; 
     left: 0; 
@@ -199,7 +174,7 @@
     transition: transform 0.3s ease; 
 }
 
-.fullscreen-menu a:hover::before, .submenu a:hover::before { 
+.fullscreen-menu a:hover::before { 
     transform: translateX(0); 
 }
 
