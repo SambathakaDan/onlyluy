@@ -372,7 +372,7 @@ body {
     justify-content: center;
     align-items: stretch;
     padding-top: 25px;
-    max-width: 1600px;
+    max-width: 1000px;
     width: 100%;
 }
 
@@ -391,7 +391,12 @@ body {
 }
 
 .version1 { background-color: #F07800; }
-.version2 { background-color: #FFD600; transform: scaleY(1.05); z-index: 1; }
+.version2 { 
+    background-color: #FFD600; 
+    transform: scaleY(1.05); 
+    z-index: 1;
+    box-shadow: 0px 15px 40px rgba(17,17,17);
+}
 .version3 { background-color: #1E9FE8; }
 
 .version:hover {
@@ -401,6 +406,7 @@ body {
 
 .version2:hover {
     transform: scaleY(1.05) translateY(-6px);
+    box-shadow: 0px 15px 30px;
 }
 
 .version-header {
