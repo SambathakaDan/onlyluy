@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="contact-style.css">
+</head>
+<body>
+    <section class="contact-header">
+        <div class="particles" id="particles"></div>
+        <p class="hero-eyebrow">Support &amp; Sales</p>
+        <h1 class="hero-heading" id="heroHeading">
+        <span class="hero-highlight">Payments made simple.</span><span class="hero-second-text">Questions answered faster.</span>
+        </h1>
+        <p class="hero-subtext-1">&#9993;support@onlyluy.com</p>
+        <p class="hero-subtext-2">&#9742;+885 12 345 678</p>
+       </section>
+    <div class="header-strip">
+        <div class="strip-track" id="stripTrack">
+            <span class="strip-icon">🚀 Don't be shy</span>
+            <span class="strip-icon">💯 We're here to help</span>
+            <span class="strip-icon">📞 Call or email us</span>
+            <span class="strip-icon">💬 We'll respond quickly</span>
+        </div>
+        </div>
+    <section class="contact-body">
+        <div class="form-container">
+        <h2 class="form-heading">How can we help?</h2>
+        <p class="form-subtext">Our team typically responds within a few hours on business days.</p>
+        <form id="contact-form">
+            <div class="form-row">
+                <div class="field">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" placeholder="Enter your first name" required />
+                </div>
+                <div class="field">
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" placeholder="Enter your last name" required />
+                </div>
+            </div>
+            <div class="field">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="you@example.com" required />
+            </div>
+            <div class="field">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" placeholder="What do you want to ask about?" />
+            </div>
+            <div class="field">
+                <p style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; font-weight:600; margin-bottom:0.5rem;">I need help with</p>
+                <div class="radio-group">
+                    <input type="radio" name="interest" id="r1" value="account" checked />
+                    <label for="r1"><span>My Account</span></label>
+                    <input type="radio" name="interest" id="r2" value="payments" />
+                    <label for="r2"><span>Payments</span></label>
+                    <input type="radio" name="interest" id="r3" value="business" />
+                    <label for="r3"><span>Business / API</span></label>
+                    <input type="radio" name="interest" id="r4" value="other" />
+                    <label for="r4"><span>Other</span></label>
+                </div>
+            </div>
+            <div class="field">
+                <label for="msg">Message</label>
+                <textarea id="msg" placeholder="Describe your issue or question. Include any transaction IDs if relevant..." required></textarea>
+            </div>
+            <button type="submit" class="btn-submit" id="submitBtn">
+                <span class="btn-text">Send Message</span>
+                <span class="btn-arrow">→</span>
+            </button>
+        </form>
+        </div>
+    </section>
+    </main>
+    <footer class="term-footer">
+      <div class="container term-footer">
+        <p class="term footer-logo">OnlyLuy</p>
+        <p class="term footer-copy">&copy; 2026 OnlyLuy. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="contact-script.js"></script>
+</body>
+</html>
