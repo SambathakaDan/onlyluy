@@ -121,29 +121,6 @@ body {
     border-radius: 4px;
 }
 
-.stats-section {
-    padding: clamp(2rem, 4vw, 3.5rem) clamp(1rem, 3vw, 2rem);
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    background-color: #111111;
-}
-
-.stats-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 65rem;
-    gap: clamp(1rem, 3vw, 1.5rem);
-    flex-wrap: wrap;
-}
-
-.stat-item {
-    flex: 1 1 10rem;
-    text-align: center;
-    position: relative;
-}
 
 .stat-item h2 {
     margin-bottom: 0.5rem;
@@ -395,7 +372,7 @@ body {
     justify-content: center;
     align-items: stretch;
     padding-top: 25px;
-    max-width: 1600px;
+    max-width: 1000px;
     width: 100%;
 }
 
@@ -413,8 +390,13 @@ body {
     font-family: 'Nunito', sans-serif;
 }
 
-.version1 { background-color: #FFD600; }
-.version2 { background-color: #F07800; transform: scaleY(1.05); z-index: 1; }
+.version1 { background-color: #F07800; }
+.version2 { 
+    background-color: #FFD600; 
+    transform: scaleY(1.05); 
+    z-index: 1;
+    box-shadow: 0px 15px 40px rgba(17,17,17);
+}
 .version3 { background-color: #1E9FE8; }
 
 .version:hover {
@@ -424,6 +406,7 @@ body {
 
 .version2:hover {
     transform: scaleY(1.05) translateY(-6px);
+    box-shadow: 0px 15px 30px;
 }
 
 .version-header {
@@ -510,6 +493,7 @@ body {
         width: 100%;
         flex: 1 1 auto;
     }
+    .compare-section { padding: 40px 5%; }
     .version2 { transform: none; }
     .version2:hover { transform: translateY(-6px); }
     .pricing-page h1 { font-size: 1.5rem; }
@@ -704,4 +688,46 @@ body {
     cursor: pointer;
     text-decoration: underline;
 }
-    
+table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    background: #fff; 
+    border-radius: 20px; 
+    overflow: hidden; 
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.05); 
+}
+
+th, td { 
+    padding: 18px; 
+    text-align: center; 
+    border-bottom: 1px solid #eee; 
+}
+
+th { 
+    background: #171717;
+    color: #F5F0E8;
+    font-family: 'Bebas Neue', sans-serif; 
+    font-size: 1.3rem; 
+}
+
+td:first-child { 
+    text-align: left; 
+    font-weight: 800; 
+}
+
+tr:last-child td { 
+    border-bottom: none; 
+}
+.compare-section { 
+    padding: 80px 5%; 
+    max-width: 1000px; 
+    margin: 0 auto; 
+    overflow-x: auto; 
+    -webkit-overflow-scrolling: touch;
+}
+
+.compare-section h2 { 
+    font-size: clamp(2rem, 5vw, 2.5rem); 
+    text-align: center; 
+    margin-bottom: 40px; 
+}
