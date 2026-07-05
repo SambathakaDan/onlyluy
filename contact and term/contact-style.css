@@ -7,10 +7,8 @@
   --color-blue: #1E9FE8;
   --color-orange: #F07800;
   --font-display: 'Bebas Neue', sans-serif;
-  --font-mono: 'Space Mono', monospace;
-  --font-body: 'Inter', sans-serif;
+  --font-body: 'Nunito', sans-serif;
 }
-
 * {
   margin: 0;
   padding: 0;
@@ -28,16 +26,19 @@ body {
 /* ===== HERO / HEADER ===== */
 .contact-header {
   position: relative;
-  background-color: var(--color-black);
-  background-image: radial-gradient(circle, rgba(245, 240, 232, 0.15) 1px, transparent 1px);
-  background-size: 24px 24px;
-  padding: 6rem 1.5rem 5rem;
+  width:100%;
+  height: 100vh;
+  background-color: var(--color-bg);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
   overflow: hidden;
 }
 .hero-highlight {
   font-family: var(--font-display);
-  background: linear-gradient(100deg, var(--color-bg) 0%, var(--color-bg) 25%,var(--color-orange) 50%, var(--color-bg) 75%, var(--color-bg) 100%);
+  background: linear-gradient(100deg, var(--color-yellow) 0%, gray 25%,var(--color-orange) 50%, gray 75%, var(--color-black) 100%);
   background-size: 300% 100%;
   background-position: 100% 0;
   -webkit-background-clip: text;
@@ -53,7 +54,7 @@ body {
 .particle {
   position: absolute;
   opacity: 0;
-  font-family: 'Space Mono', monospace;
+  font-family: var(--font-display);
   font-weight: 700;
   color: var(--color-yellow);
   user-select: none;
@@ -87,11 +88,11 @@ body {
 }
 
 .hero-eyebrow {
-  font-family: var(--font-mono);
+  font-family: var(--font-display);
   font-size: 0.75rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--color-yellow);
+  color: var(--color-bg);
   font-weight: 700;
   margin-bottom: 1.25rem;
   position: relative;
@@ -100,38 +101,41 @@ body {
   display: inline-block;
   border-radius: 999px;
   padding: 0.5rem;
+  background-color: var(--color-black);
+}
+.hero-subtext {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
 }
 .hero-subtext-1,
 .hero-subtext-2 {
-  font-family: var(--font-mono);
+  font-family: var(--font-display);
   font-size: 0.75rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   font-weight: 700;
-  margin-top: 0.5rem;
   position: relative;
-  display: inline-block;
-  margin: auto 5px;
   border: solid 2px var(--color-bg);
   border-radius: 999px;
   padding: 0.5rem;
   background-color: var(--color-blue);
   color: black;
+  color: var(--color-bg);
+  transition: transform 0.2s ease, color 0.2s ease, background-color 0.5s ease;
 }
 .hero-subtext-2{
-  margin-top: 0.5rem;
   background-color: var(--color-orange);
-  color: var(--color-black);
 }
 .hero-subtext-1:hover {
   background-color: #1580C4;
-  color: white;
+  color: var(--color-yellow);
   cursor: pointer;
   transform: translateY(-2px);
 }
 .hero-subtext-2:hover {
   background-color: #CC6600;
-  color: white;
+  color: var(--color-yellow);
   cursor: pointer;
   transform: translateY(-2px);
 }
@@ -153,7 +157,7 @@ body {
 }
 .header-strip {
   width: 100%;
-  background-color: var(--color-yellow);
+  background-color: var(--color-black);
   padding: 0.9rem 0;
   overflow: hidden;
   position: relative;
@@ -164,20 +168,29 @@ body {
   gap: 2.5rem;
   width: max-content;
   will-change: transform;
+  height: 10vh;
 }
 .strip-icon {
- font-family: var(--font-mono);
+  font-family: var(--font-display);
   font-weight: 700;
   font-size: 0.9rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--color-black);
+  color: var(--color-bg);
   white-space: nowrap;
   display: flex;
   align-items: center;
   gap: 0.5rem;
   padding-right: 2.5rem;
-  border-right: 2px solid rgba(17,17,17,0.15);
+  border-right: 100px solid var(--color-bg);
+  background: linear-gradient(100deg, var(--color-blue) 0%, var(--color-black) 25%,var(--color-orange) 50%, var(--color-bg) 75%, var(--color-yellow) 100%);
+  background-size: 300% 100%;
+  background-position: 100% 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: sweep 3.5s ease-in-out infinite;
 }
 /* ===== FORM BODY ===== */
 .contact-body {
@@ -185,19 +198,30 @@ body {
   padding: 4rem 1.5rem 6rem;
 }
 .form-container {
+  --color-blue: black;
+  --color-orange: black;
+  --color-yellow: black;
+  --color-black: white;
   max-width: 640px;
   margin: 40px auto;
   padding: 4rem 1.5rem 6rem;
   display: flex;
   flex-direction: column;
-  border: 2px solid var(--color-black);
+  border: 2px solid black;
   border-radius: 20px;
-  background-color: var(--color-black);
-    transition: transform 1s ease, box-shadow 0.7s ease;
+  background-color: #faeedc;
+  transition: transform 1s ease, box-shadow 0.7s ease, background-color 1s ease;
 }
 .form-container:hover {
+  --color-bg: #F5F0E8;
+  --color-black: #111111;
+  --color-yellow: #FFD600;
+  --color-blue: #1E9FE8;
+  --color-orange: #F07800;
   transform: translateY(-3px);
   box-shadow: 8px 8px 20px rgba(245, 123, 24, 0.7);
+  background-color: var(--color-black);
+
 }
 .form-heading {
   font-family: var(--font-display);
@@ -234,7 +258,7 @@ body {
 }
 
 .field label {
-  font-family: var(--font-mono);
+  font-family: var(--font-display);
   font-size: 0.7rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -249,7 +273,7 @@ body {
   font-family: var(--font-body);
   font-size: 0.95rem;
   padding: 0.85rem 1rem;
-  border: 2px solid var(--color-black);
+  border: 2px solid black;
   border-radius: 6px;
   background-color: var(--color-bg);
   color: var(--color-black);
@@ -304,15 +328,15 @@ body {
 }
 
 .radio-group label {
-  font-family: var(--font-mono);
+  font-family: var(--font-display);
   font-size: 0.8rem;
   font-weight: 600;
   padding: 0.6rem 1.1rem;
-  border: 2px solid var(--color-black);
+  border: 2px solid black;
   border-radius: 999px;
   cursor: pointer;
   background-color: var(--color-bg);
-  color: var(--color-black);
+  color: black;
   transition: all 0.2s ease;
   margin-bottom: 0;
 }
@@ -334,7 +358,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 0.6rem;
-  font-family: var(--font-mono);
+  font-family: var(--font-display);
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -376,15 +400,17 @@ body {
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 640px) {
+  .hero-subtext {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .contact-header {
+    padding: 2rem 2.5rem;
+  }
   .form-row {
     grid-template-columns: 1fr;
     gap: 1.25rem;
   }
-
-  .contact-header {
-    padding: 4.5rem 1.25rem 3.5rem;
-  }
-
   .contact-body {
     padding: 3rem 1.25rem 4rem;
   }

@@ -1,5 +1,5 @@
 const particlesContainer = document.getElementById('particles');
-const PARTICLE_COUNT = 25;
+const PARTICLE_COUNT = 40;
 const accentColors = ['', '', '', 'accent-yellow', 'accent-blue', 'accent-orange'];
 
 for (let i = 0; i < PARTICLE_COUNT; i++) {
@@ -7,16 +7,19 @@ for (let i = 0; i < PARTICLE_COUNT; i++) {
   const accent = accentColors[Math.floor(Math.random() * accentColors.length)];
   dot.classList.add('particle');
   if (accent) dot.classList.add(accent);
-  dot.textContent = '$';
 
-  const size = 20 + Math.random() * 25; // 12px–26px font size
-  const duration = 6 + Math.random() * 8;
-  const delay = Math.random() * 10;
-  const twinkleDuration = 2 + Math.random() * 3;
+  // ---- SIZE: change this range to make coins bigger/smaller ----
+  const size = 20 + Math.random() * 30; // 12px–26px coin size
+
+  // ---- SPEED: change these ranges to make float/twinkle faster/slower ----
+  const duration = 6 + Math.random() * 8;       // float duration (up-down drift)
+  const twinkleDuration = 2 + Math.random() * 3; // twinkle/pulse speed
+  const delay = Math.random() * 1;              // stagger start times
+
+  dot.innerHTML = `<img src="asset/coin.png" alt="Particle" style="width:${size}px; height:${size}px;">`;
 
   dot.style.left = `${Math.random() * 100}%`;
   dot.style.top = `${Math.random() * 100}%`;
-  dot.style.fontSize = `${size}px`;
   dot.style.animationDuration = `${duration}s, ${twinkleDuration}s`;
   dot.style.animationDelay = `${delay}s, ${delay}s`;
 
@@ -59,3 +62,37 @@ for (let i = 0; i < PARTICLE_COUNT; i++) {
   }
 })();
 
+
+window.addEventListener('scroll', () => {
+  const progress = Math.min(
+    window.scrollY / (document.body.scrollHeight - window.innerHeight)*10, 1
+  );
+
+  // header: #F5F0E8 (off-white) → #111111 (black)
+  const r = Math.round(245 + (17  - 245) * progress);
+  const g = Math.round(240 + (17  - 240) * progress);
+  const b = Math.round(232 + (17  - 232) * progress);
+
+  document.querySelector('.contact-header').style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+ }); 
+window.addEventListener('scroll', () => {
+  const progress = Math.min(
+    window.scrollY / (document.body.scrollHeight - window.innerHeight)*8, 1
+  );
+  // strip: #111111 (black) → #FFD600 (yellow)
+  const sr = Math.round(17 + (255 - 17) * progress);
+  const sg = Math.round(17 + (214 - 17) * progress);
+  const sb = Math.round(17 + (0   - 17) * progress);
+
+  document.querySelector('.header-strip').style.backgroundColor = `rgb(${sr}, ${sg}, ${sb})`;
+ }); 
+window.addEventListener('scroll', () => {
+  const progress = Math.min(
+    window.scrollY / (document.body.scrollHeight - window.innerHeight)*2, 1
+  );
+  // body: #111111 → #ffffff (black to white)
+  const br = Math.round(17 + (255 - 17) * progress);
+  const bg = Math.round(17 + (255 - 17) * progress);
+  const bb = Math.round(17 + (255 - 17) * progress);
+  document.querySelector('.contact-body').style.backgroundColor = `rgb(${br}, ${bg}, ${bb})`;
+});
