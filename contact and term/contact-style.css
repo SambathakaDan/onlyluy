@@ -173,7 +173,7 @@ body {
 .strip-icon {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 1.5rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--color-bg);
