@@ -8,7 +8,6 @@
     --ease: cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-/* Base Resets */
 * { 
     margin: 0; 
     padding: 0; 
@@ -21,6 +20,8 @@ body {
     font-family: 'Nunito', sans-serif; 
     overflow-x: hidden; 
     line-height: 1.5; 
+    cursor: url('/contact and term/asset/coin.png') 8 8, auto;
+
 }
 
 h1, h2, h3 { 

@@ -24,6 +24,8 @@ body {
     color: var(--text-color);
     font-family: 'Nunito', sans-serif;
     overflow-x: hidden;
+    cursor: url('/contact and term/asset/coin.png') 8 8, auto;
+
 }
 
 h1, h2, h3, .display-font {
