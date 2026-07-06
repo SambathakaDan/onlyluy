@@ -1,3 +1,8 @@
+window.onload = () => {
+    document.querySelector('.marquee-anim-track').classList.add('ready');
+};
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const backgroundLayers = document.querySelectorAll('.background-layer');
     const scrollSections = document.querySelectorAll('[data-bg]');
@@ -10,10 +15,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const setTestimonialsHeight = () => {
         if (!testimonialsTrack || !testimonialsWrapper) return;
-        const cardCount = testimonialsTrack.children.length;
-        // FIXED: Added backticks to correctly process the layout interpolation string
-        testimonialsWrapper.style.height = `${window.innerHeight * cardCount}px`;
+        const trackWidth = testimonialsTrack.scrollWidth;
+        const extraScroll = Math.max(0, trackWidth - window.innerWidth);
+        testimonialsWrapper.style.height = `${window.innerHeight + extraScroll}px`;
     };
+    
     setTimeout(setTestimonialsHeight, 500);
     window.addEventListener('resize', setTestimonialsHeight);
 
@@ -83,17 +89,11 @@ document.addEventListener('DOMContentLoaded', () => {
             const scrollTop = -rect.top;
 
             if (scrollTop >= 0 && scrollTop <= scrollableHeight) {
-                const cards = testimonialsTrack.children;
-                const progress = scrollableHeight > 0 ? scrollTop / scrollableHeight : 0;
-                const activeIndex = Math.min(cards.length - 1, Math.round(progress * (cards.length - 1)));
-                const targetCard = cards[activeIndex];
-
-                if (targetCard) {
-                    const trackWidth = testimonialsTrack.scrollWidth;
-                    const trackStaticLeft = (window.innerWidth - trackWidth) / 2;
-                    const desiredLeft = window.innerWidth * 0.1;
-                    
-                    testimonialsTrack.style.transform = `translateX(${desiredLeft - trackStaticLeft - targetCard.offsetLeft}px)`;
+                let progress = scrollableHeight > 0 ? scrollTop / scrollableHeight : 0;
+                
+                const maxX = testimonialsTrack.scrollWidth - window.innerWidth; 
+                if (maxX > 0) {
+                    testimonialsTrack.style.transform = `translateX(${-progress * maxX}px)`;
                 }
             }
         }
