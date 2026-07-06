@@ -23,6 +23,7 @@ body {
   background-color: var(--color-bg);
   color: var(--color-black);
   line-height: 1.6;
+  cursor: url('/contact and term/asset/coin.png') 8 8, auto;
 }
 
 /* ===== HEADER ===== */
