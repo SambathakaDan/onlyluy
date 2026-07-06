@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuBtn = document.getElementById('menuBtn');
     const fullMenu = document.getElementById('fullMenu');
     const navCloseBtn = document.getElementById('navCloseBtn');
-    const featuresDropdown = document.getElementById('featuresDropdown');
     if (!menuBtn || !fullMenu) return;
 
     if (menuBtn) {
@@ -17,16 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
         navCloseBtn.addEventListener('click', () => {
             menuBtn.classList.remove('open');
             fullMenu.classList.remove('open');
-            if (featuresDropdown) {
-                featuresDropdown.classList.remove('open');
-            }
-        });
-    }
-    if (featuresDropdown) {
-        const trigger = featuresDropdown.querySelector('a');
-        trigger.addEventListener('click', (e) => {
-            e.preventDefault();
-            featuresDropdown.classList.toggle('open');
         });
     }
 
