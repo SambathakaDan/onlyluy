@@ -15,10 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const setTestimonialsHeight = () => {
         if (!testimonialsTrack || !testimonialsWrapper) return;
-        const trackWidth = testimonialsTrack.scrollWidth;
-        const extraScroll = Math.max(0, trackWidth - window.innerWidth);
-        testimonialsWrapper.style.height = `${window.innerHeight + extraScroll}px`;
-    };
+        const cardCount = testimonialsTrack.children.length;
+        testimonialsWrapper.style.height = `${window.innerHeight * cardCount}px`;
+};
     
     setTimeout(setTestimonialsHeight, 500);
     window.addEventListener('resize', setTestimonialsHeight);
@@ -89,12 +88,15 @@ document.addEventListener('DOMContentLoaded', () => {
             const scrollTop = -rect.top;
 
             if (scrollTop >= 0 && scrollTop <= scrollableHeight) {
-                let progress = scrollableHeight > 0 ? scrollTop / scrollableHeight : 0;
-                
-                const maxX = testimonialsTrack.scrollWidth - window.innerWidth; 
-                if (maxX > 0) {
-                    testimonialsTrack.style.transform = `translateX(${-progress * maxX}px)`;
-                }
+                const cards = testimonialsTrack.children;
+                const progress = scrollableHeight > 0 ? scrollTop / scrollableHeight : 0;
+                const activeIndex = Math.min(cards.length - 1, Math.round(progress * (cards.length - 1)));
+                const targetCard = cards[activeIndex];
+
+                const trackWidth = testimonialsTrack.scrollWidth;
+                const trackStaticLeft = (window.innerWidth - trackWidth) / 2;
+                const desiredLeft = window.innerWidth * 0.1;
+                testimonialsTrack.style.transform = `translateX(${desiredLeft - trackStaticLeft - targetCard.offsetLeft}px)`;
             }
         }
 
