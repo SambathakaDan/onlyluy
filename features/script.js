@@ -13,7 +13,7 @@ function switchTab(tab) {
 (function initPricingToggle() {
     const monthlybutton = document.getElementById("btnmonth");
     const yearlybutton  = document.getElementById("btnyear");
-    const prodollar     = document.querySelector(".version2 .version-header span.font1");
+    const prodollar     = document.getElementById("-25%off");
 
     if (!monthlybutton || !yearlybutton || !prodollar) return;
 
