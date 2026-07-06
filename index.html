@@ -10,10 +10,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
 
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="wallet.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="icon" type="image/png" href="assets\logonbg.png">
 
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/wallet.css">
-    <link rel="stylesheet" href="/css/navbar.css">
 </head>
 <body>
 
@@ -27,19 +29,20 @@
         </div>
     </div>
 
-    <button id="global-hamburger" class="global-hamburger">
-        <span></span><span></span><span></span>
-    </button>
-
-    <nav id="fullscreen-nav" class="fullscreen-nav">
-        <ul>
-            <li><a href="/onlyluy/home.html" data-text="HOME">HOME</a></li>
-            <li><a href="/About/about.html" data-text="ABOUT">ABOUT</a></li>
-            <li><a href="/features/features.html" data-text="FEATURES">FEATURES</a></li>
-            <li><a href="pricing.html" data-text="GET STARTED">GET STARTED</a></li>
-            <li><a href="#" data-text="CONTACT">CONTACT</a></li>
-        </ul>
-    </nav>
+    <header class="site-header">
+        <button class="menu-trigger" id="menuBtn" aria-label="Open Menu">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="fullscreen-menu" id="fullMenu">
+            <button class="nav-close-btn" id="navCloseBtn" aria-label="Close Menu"></button>
+            <ul>
+                <li><a href="/onlyluy/index.html" data-text="HOME">Home</a></li>
+                <li><a href="/About/about.html" data-text="ABOUT">About</a></li>
+                <li><a href="/features/features.html" data-text="GET STARTED">Get Started</a></li>
+                <li><a href="/contact and term/contact.html" data-text="CONTACT">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <div id="bg-layer-0" class="background-layer active bg-color-cream"></div>
     <div id="bg-layer-1" class="background-layer bg-color-dark"></div>
@@ -69,7 +72,7 @@
             >
             </model-viewer>
         </div>
-        <a href="pricing.html" class="hero-get-started-btn">GET STARTED</a>
+        <a href="./features/features.html" class="hero-get-started-btn">GET STARTED</a>
     </section>
 
     <section id="brand-partnerships" class="brand-partnerships">
@@ -111,7 +114,7 @@
                 <div class="random-terminal-box">
                     <div class="terminal-bar">
                         <span class="terminal-title">ONLYLUY // GLOBAL_ROUTER_V1</span>
-                        <div class="terminal-signals"><span class="signal-dot"></span><span class="signal-dot"></span></div>
+                        <div class="terminal-signals"><span class="signal-dot"></span><span class="signal-dot"></span><span class="signal-dot"></span></div>
                     </div>
                     <div class="currency-tab-interaction">
                         <button class="currency-tabbing active" data-currency="usd">USD ($)</button>
@@ -243,18 +246,26 @@
         <div class="signup-content">
             <span class="signup-tag">READY TO GO GLOBAL?</span>
             <h2>STOP WAITING.<br><span>START SENDING.</span></h2>
-            <a href="pricing.html" class="signup-btn">CREATE FREE ACCOUNT</a>
+            <a href="/features/features.html" class="signup-btn">CREATE FREE ACCOUNT</a>
         </div>
+    
 
+    </footer>
+    <footer class="onlyluy-footer">
         <div class="footer-divider"></div>
-        
         <div class="footer-links">
-            <a href="#">Home</a><a href="#">About</a><a href="#">Features</a><a href="pricing.html">Get Started</a><a href="#">Contact</a>
+            <a href="/onlyluy/index.html">Home</a>
+            <a href="/About/about.html">About</a>
+            <a href="/features/features.html">Get Started</a>
+            <a href="/contact and term/contact.html">Contact</a>
         </div>
         <div class="footer-copy">&copy; 2026 OnlyLuy. All rights reserved. Border-to-Border. Wallet-to-Wallet.</div>
     </footer>
+    <script src="js/nav.js"></script>
+    <script src="js/loader.js"></script>
+    <script src="wallet.js"></script>
+    <script src="main.js"></script>
+    <script src="js/smooth-scroll.js"></script>
 
-    <script src="/js/wallet.js"></script>
-    <script src="/js/main.js"></script>
 </body>
 </html>
