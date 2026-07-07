@@ -1,18 +1,30 @@
+// Marquee — starts the scrolling ticker only after full page load
 window.onload = () => {
     document.querySelector('.marquee-anim-track').classList.add('ready');
 };
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    const backgroundLayers = document.querySelectorAll('.background-layer');
-    const scrollSections = document.querySelectorAll('[data-bg]');
-    const heroBgText = document.getElementById('hero-bg-text');
-    const roadmapWrapper = document.getElementById('roadmap-wrapper');
-    const roadmapSteps = document.querySelectorAll('.roadmap-step');
-    const progressFill = document.getElementById('progress-fill');
-    const testimonialsWrapper = document.getElementById('testimonials-wrapper');
-    const testimonialsTrack = document.getElementById('testimonials-track');
 
+    // Element references
+    const backgroundLayers   = document.querySelectorAll('.background-layer');
+    const scrollSections     = document.querySelectorAll('[data-bg]');
+    const heroBgText         = document.getElementById('hero-bg-text');
+    const roadmapWrapper     = document.getElementById('roadmap-wrapper');
+    const roadmapSteps       = document.querySelectorAll('.roadmap-step');
+    const progressFill       = document.getElementById('progress-fill');
+    const testimonialsWrapper = document.getElementById('testimonials-wrapper');
+    const testimonialsTrack   = document.getElementById('testimonials-track');
+
+    const currencyTabs    = document.querySelectorAll('.currency-tabbing');
+    const balanceDisplay  = document.getElementById('balance-display');
+    const networkName     = document.getElementById('morph-network');
+    const networkSpeed    = document.getElementById('morph-speed');
+    const logLine1        = document.getElementById('log-line-1');
+    const logLine2        = document.getElementById('log-line-2');
+
+
+    // Testimonials — set scroll-jacked wrapper height
     const setTestimonialsHeight = () => {
         if (!testimonialsTrack || !testimonialsWrapper) return;
         const cardCount = testimonialsTrack.children.length;
@@ -22,6 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(setTestimonialsHeight, 500);
     window.addEventListener('resize', setTestimonialsHeight);
 
+
+    // Background switching — crossfades layer based on scroll section
     const updateBackground = () => {
         const scrollMidPoint = window.scrollY + window.innerHeight / 2;
         let activeIndex = 0;
@@ -38,6 +52,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
+
+    // Roadmap — scrollytelling progress bar + step states
     let lastCheckpointStep = -1;
 
     const updateRoadmap = () => {
@@ -54,6 +70,8 @@ document.addEventListener('DOMContentLoaded', () => {
             if (activeStepIndex < 0) activeStepIndex = 0;
             if (activeStepIndex >= roadmapSteps.length) activeStepIndex = roadmapSteps.length - 1;
 
+            // iOS Safari has no Vibration API — navigator.vibrate is undefined there,
+            // so this guard makes it a harmless no-op on iPhone instead of an error.
             if (activeStepIndex !== lastCheckpointStep) {
                 lastCheckpointStep = activeStepIndex;
                 if (navigator.vibrate) navigator.vibrate(40);
@@ -74,14 +92,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+
+    // Master scroll handler — runs all scroll-driven effects
     const handleScroll = () => {
         updateBackground();
 
+        // Hero text parallax + zoom
         const scrollProgress = window.scrollY / window.innerHeight;
         if (heroBgText) {
-            heroBgText.style.transform = `translate(-50%, calc(-50% + ${window.scrollY * 0.3}px)) scale(${1 + scrollProgress * 0.5})`;
+            heroBgText.style.transform =
+                `translate(-50%, calc(-50% + ${window.scrollY * 0.3}px)) scale(${1 + scrollProgress * 0.5})`;
         }
 
+        // Testimonials horizontal carousel driven by vertical scroll
         if (testimonialsWrapper && testimonialsTrack) {
             const rect = testimonialsWrapper.getBoundingClientRect();
             const scrollableHeight = testimonialsWrapper.offsetHeight - window.innerHeight;
@@ -96,13 +119,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 const trackWidth = testimonialsTrack.scrollWidth;
                 const trackStaticLeft = (window.innerWidth - trackWidth) / 2;
                 const desiredLeft = window.innerWidth * 0.1;
-                testimonialsTrack.style.transform = `translateX(${desiredLeft - trackStaticLeft - targetCard.offsetLeft}px)`;
+                testimonialsTrack.style.transform =
+                    `translateX(${desiredLeft - trackStaticLeft - targetCard.offsetLeft}px)`;
             }
         }
 
         updateRoadmap();
     };
 
+    // Throttle scroll handling to once per animation frame
     let ticking = false;
     window.addEventListener('scroll', () => {
         if (!ticking) {
@@ -114,13 +139,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }, { passive: true });
 
-    const currencyTabs = document.querySelectorAll('.currency-tabbing');
-    const balanceDisplay = document.getElementById('balance-display');
-    const networkName = document.getElementById('morph-network');
-    const networkSpeed = document.getElementById('morph-speed');
-    const logLine1 = document.getElementById('log-line-1');
-    const logLine2 = document.getElementById('log-line-2');
 
+    // Wallet / currency tab switcher — demo balance data per currency
     const currencyData = {
         usd: { symbol: '$', bal: '1450.00', net: 'OnlyLuy-Direct (US-East)', spd: '0.02s' },
         khr: { symbol: '៛', bal: '5,900,000', net: 'OnlyLuy-Asia (Phnom Penh)', spd: '0.03s' },
@@ -145,6 +165,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+
+    // Init — set initial heights + run once on load
     if (roadmapWrapper && roadmapSteps.length > 0) {
         roadmapWrapper.style.height = `${roadmapSteps.length * 300}vh`;
     }
