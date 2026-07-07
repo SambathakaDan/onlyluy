@@ -1,26 +1,25 @@
 //raining coin
 const particlesContainer = document.getElementById('particles');
 const PARTICLE_COUNT = 40;
-const accentColors = ['', '', '', 'accent-yellow', 'accent-blue', 'accent-orange'];
 
-for (let i = 0; i < PARTICLE_COUNT; i++) {
-  const dot = document.createElement('div');
-  const accent = accentColors[Math.floor(Math.random() * accentColors.length)];
-  dot.classList.add('particle');
-  if (accent) dot.classList.add(accent);
-  const size = 20 + Math.random() * 30;
-  const duration = 6 + Math.random() * 8;       
-  const twinkleDuration = 2 + Math.random() * 3; 
-  const delay = Math.random() * 1;              
+if (particlesContainer) {
+  for (let i = 0; i < PARTICLE_COUNT; i++) {
+    const dot = document.createElement('div');
+    dot.classList.add('particle');
 
-  dot.innerHTML = `<img src="asset/coin.png" alt="Particle" style="width:${size}px; height:${size}px;">`;
+    const size = 30 + Math.random() * 40;
+    const duration = 6 + Math.random() * 8;
+    const twinkleDuration = 2 + Math.random() * 3;
+    const delay = Math.random() * 1;
 
-  dot.style.left = `${Math.random() * 100}%`;
-  dot.style.top = `${Math.random() * 100}%`;
-  dot.style.animationDuration = `${duration}s, ${twinkleDuration}s`;
-  dot.style.animationDelay = `${delay}s, ${delay}s`;
+    dot.innerHTML = `<img src="asset/coin.png" alt="" style="width:${size}px; height:${size}px;">`;
+    dot.style.left = `${Math.random() * 100}%`;
+    dot.style.top = `${Math.random() * 100}%`;
+    dot.style.animationDuration = `${duration}s, ${twinkleDuration}s`;
+    dot.style.animationDelay = `${delay}s, ${delay}s`;
 
-  particlesContainer.appendChild(dot);
+    particlesContainer.appendChild(dot);
+  }
 }
 
 //strip animation

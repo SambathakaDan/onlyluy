@@ -7,7 +7,6 @@
   --color-blue: #1E9FE8;
   --color-orange: #F07800;
   --font-display: 'Bebas Neue', sans-serif;
-  --font-mono: 'Space Mono', monospace;
   --font-body: 'Nunito', sans-serif;
 }
 
@@ -31,8 +30,6 @@ body {
   background-color: var(--color-black);
   color: var(--color-bg);
   padding: 5rem 1.5rem 4rem;
-  background-image: radial-gradient(circle, rgba(245, 240, 232, 0.15) 1px, transparent 1px);
-  background-size: 24px 24px;
 }
 
 .term-container {
