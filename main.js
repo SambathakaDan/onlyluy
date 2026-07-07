@@ -17,21 +17,21 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!testimonialsTrack || !testimonialsWrapper) return;
         const cardCount = testimonialsTrack.children.length;
         testimonialsWrapper.style.height = `${window.innerHeight * cardCount}px`;
-};
-    
+    };
+
     setTimeout(setTestimonialsHeight, 500);
     window.addEventListener('resize', setTestimonialsHeight);
 
     const updateBackground = () => {
         const scrollMidPoint = window.scrollY + window.innerHeight / 2;
         let activeIndex = 0;
-        
+
         scrollSections.forEach((sec) => {
             if (sec.offsetTop <= scrollMidPoint && sec.offsetTop + sec.offsetHeight > scrollMidPoint) {
                 activeIndex = parseInt(sec.dataset.bg);
             }
         });
-        
+
         backgroundLayers.forEach((layer, index) => {
             if (index === activeIndex) layer.classList.add('active');
             else layer.classList.remove('active');
@@ -47,9 +47,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const scrollTop = -rect.top;
 
         if (scrollTop >= 0 && scrollTop <= scrollableHeight) {
-            let progress = scrollTop / scrollableHeight; 
+            let progress = scrollTop / scrollableHeight;
             if (progressFill) progressFill.style.height = `${progress * 100}%`;
-            
+
             let activeStepIndex = Math.floor(progress * roadmapSteps.length);
             if (activeStepIndex < 0) activeStepIndex = 0;
             if (activeStepIndex >= roadmapSteps.length) activeStepIndex = roadmapSteps.length - 1;
@@ -103,7 +103,16 @@ document.addEventListener('DOMContentLoaded', () => {
         updateRoadmap();
     };
 
-    window.addEventListener('scroll', handleScroll);
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            requestAnimationFrame(() => {
+                handleScroll();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    }, { passive: true });
 
     const currencyTabs = document.querySelectorAll('.currency-tabbing');
     const balanceDisplay = document.getElementById('balance-display');
@@ -125,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
             tab.classList.add('active');
             const currencyKey = tab.dataset.currency;
             const data = currencyData[currencyKey];
-            
+
             if (data) {
                 if (balanceDisplay) balanceDisplay.textContent = `${data.symbol}${data.bal}`;
                 if (networkName) networkName.textContent = data.net;
@@ -140,5 +149,5 @@ document.addEventListener('DOMContentLoaded', () => {
         roadmapWrapper.style.height = `${roadmapSteps.length * 300}vh`;
     }
 
-    handleScroll(); 
+    handleScroll();
 });

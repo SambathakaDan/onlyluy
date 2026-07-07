@@ -141,7 +141,7 @@
 
 
 /* --- TYPOGRAPHY LINKS & TEXT MASKING EFFECTS --- */
-.fullscreen-menu a, .submenu a { 
+.fullscreen-menu a {
     font-family: 'Bebas Neue', sans-serif; 
     color: transparent; 
     -webkit-text-stroke: 1px #F5F0E8; 

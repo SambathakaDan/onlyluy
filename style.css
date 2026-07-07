@@ -28,7 +28,7 @@ body {
 
 }
 
-h1, h2, h3, .display-font {
+h1, h2, h3{
     font-family: 'Bebas Neue', sans-serif;
     letter-spacing: 2px;
 }

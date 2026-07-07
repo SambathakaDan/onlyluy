@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
-
+    <link rel="preload" as="fetch" href="/media/wallet.glb" crossorigin>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="style.css">
@@ -19,22 +19,22 @@
 </head>
 <body>
 
-    <div id="loading-curtain" class="loading-curtain">
+    <div class="loading-curtain">
         <div class="loader-content">
-            <div class="loader-status" id="loader-status">INITIALIZING SYSTEM</div>
+            <div class="loader-status">INITIALIZING SYSTEM</div>
             <div class="loader-track">
-                <div class="loader-fill" id="loader-fill"></div>
+                <div class="loader-fill"></div>
             </div>
-            <div class="loader-percent" id="loader-percent">0%</div>
+            <div class="loader-percent">0%</div>
         </div>
     </div>
 
     <header class="site-header">
-        <button class="menu-trigger" id="menuBtn" aria-label="Open Menu">
+        <button class="menu-trigger">
             <span></span><span></span><span></span>
         </button>
-        <nav class="fullscreen-menu" id="fullMenu">
-            <button class="nav-close-btn" id="navCloseBtn" aria-label="Close Menu"></button>
+        <nav class="fullscreen-menu">
+            <button class="nav-close-btn"></button>
             <ul>
                 <li><a href="index.html" data-text="HOME">Home</a></li>
                 <li><a href="/About/about.html" data-text="ABOUT">About</a></li>
@@ -45,20 +45,19 @@
         </nav>
     </header>
 
-    <div id="bg-layer-0" class="background-layer active bg-color-cream"></div>
-    <div id="bg-layer-1" class="background-layer bg-color-dark"></div>
-    <div id="bg-layer-2" class="background-layer bg-color-cream"></div>
-    <div id="bg-layer-3" class="background-layer bg-gradient-split"></div>
-    <div id="bg-layer-4" class="background-layer bg-color-dark"></div>
+    <div class="background-layer active bg-color-cream"></div>
+    <div class="background-layer bg-color-dark"></div>
+    <div class="background-layer bg-color-cream"></div>
+    <div class="background-layer bg-gradient-split"></div>
+    <div class="background-layer bg-color-dark"></div>
 
-    <section id="hero-section" class="hero-section" data-bg="0">
-        <div class="hero-background-text" id="hero-bg-text">ONLYLUY</div>
+    <section class="hero-section" data-bg="0">
+        <div class="hero-background-text">ONLYLUY</div>
         
-        <div id="rain-container" class="rain-container"></div>
+        <div class="rain-container"></div>
 
-        <div class="wallet-stage" id="wallet-stage">
+        <div class="wallet-stage">
             <model-viewer
-                id="wallet-3d-model"
                 class="wallet-3d-viewer"
                 src="/media/wallet.glb"
                 alt="A 3D model of a leather wallet"
@@ -76,7 +75,7 @@
         <a href="./features/features.html" class="hero-get-started-btn">GET STARTED</a>
     </section>
 
-    <section id="brand-partnerships" class="brand-partnerships">
+    <section class="brand-partnerships">
         <div class="brand-partnerships-box">
             <p class="marquee-title">SUPPORTING GLOBAL LIQUIDITY PIPELINES</p>
             <div class="marquee-anim-track">
@@ -118,7 +117,7 @@
         </div>
     </section>
 
-    <section id="global-routing-system" class="global-routing-system" data-bg="2">
+    <section class="global-routing-system" data-bg="2">
         <div class="routing-split-box">
             <div class="routing-text">
                 <div class="status-tag"><span class="pulse-dot"></span> ALWAYS ACTIVE</div>
@@ -141,17 +140,17 @@
                     <div class="interactive-card-canvas">
                         <div class="card-identity">
                             <span class="card-label">CURRENT BALANCE</span>
-                            <div class="card-live-display" id="balance-display">$1450.00</div>
+                            <div class="card-live-display">$1450.00</div>
                         </div>
                         <div class="routing-matrix-box">
                             <div class="routing-data-labels">
                                 <div class="data-row">
                                     <span class="label-capital">Network:</span>
-                                    <span class="label-value" id="morph-network">OnlyLuy-Direct (US-East)</span>
+                                    <span class="label-value">OnlyLuy-Direct (US-East)</span>
                                 </div>
                                 <div class="data-row">
                                     <span class="label-capital">Speed:</span>
-                                    <span class="label-value secure" id="morph-speed">0.02s Settlement</span>
+                                    <span class="label-value secure">0.02s Settlement</span>
                                 </div>
                             </div>
                             <div class="embedded-qr-interaction">
@@ -174,7 +173,7 @@
         <div class="roadmap-sticky">
             <div class="roadmap-track">
                 <div class="progress-line-container">
-                    <div class="progress-line-fill" id="progress-fill"></div>
+                    <div class="progress-line-fill"></div>
                 </div>
 
                 <div class="roadmap-step active" data-step="0">
@@ -225,7 +224,7 @@
         </div>
     </div>
 
-    <div id="testimonials-wrapper" class="testimonials-wrapper" data-bg="4">
+    <div class="testimonials-wrapper" data-bg="4">
         <div class="testimonials-sticky">
             <div class="testimonials-bg-orbs">
                 <div class="orb orb-1"></div>
@@ -258,7 +257,7 @@
         </div>
     </div>
 
-    <footer id="signup-footer" class="signup-footer" data-bg="4">
+    <footer class="signup-footer" data-bg="4">
         <div class="signup-bg-text">JOIN</div>
         <div class="signup-content">
             <span class="signup-tag">READY TO GO GLOBAL?</span>
