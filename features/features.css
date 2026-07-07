@@ -429,7 +429,7 @@ body {
     font-style: normal;
 }
 
-.version-header span.font1 {
+.version-header span {
     font-family: 'Bebas Neue', sans-serif;
     font-weight: 400;
 }
@@ -727,7 +727,19 @@ tr:last-child td {
 }
 
 .compare-section h2 { 
+    font-family: 'Bebas Neue', sans-serif;
     font-size: clamp(2rem, 5vw, 2.5rem); 
     text-align: center; 
     margin-bottom: 40px; 
+}
+.pricing-section h1{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2rem, 5vw, 2.5rem); 
+    text-align: center;
+    font-weight: 700;
+}
+.pricing-section h2{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 550;
+    font-size: clamp(2rem, 5vw, 1rem); 
 }
