@@ -19,13 +19,13 @@
 </head>
 <body>
 
-    <div class="loading-curtain">
+    <div id="loading-curtain" class="loading-curtain">
         <div class="loader-content">
-            <div class="loader-status">INITIALIZING SYSTEM</div>
+            <div id="loader-status" class="loader-status">INITIALIZING SYSTEM</div>
             <div class="loader-track">
-                <div class="loader-fill"></div>
+                <div id="loader-fill" class="loader-fill"></div>
             </div>
-            <div class="loader-percent">0%</div>
+            <div id="loader-percent" class="loader-percent">0%</div>
         </div>
     </div>
 
@@ -52,12 +52,13 @@
     <div class="background-layer bg-color-dark"></div>
 
     <section class="hero-section" data-bg="0">
-        <div class="hero-background-text">ONLYLUY</div>
+        <div id="hero-bg-text" class="hero-background-text">ONLYLUY</div>
         
-        <div class="rain-container"></div>
+        <div id="rain-container" class="rain-container"></div>
 
         <div class="wallet-stage">
             <model-viewer
+                id="wallet-3d-model" 
                 class="wallet-3d-viewer"
                 src="/media/wallet.glb"
                 alt="A 3D model of a leather wallet"
@@ -140,17 +141,17 @@
                     <div class="interactive-card-canvas">
                         <div class="card-identity">
                             <span class="card-label">CURRENT BALANCE</span>
-                            <div class="card-live-display">$1450.00</div>
+                            <div id="balance-display" class="card-live-display">$1450.00</div>
                         </div>
                         <div class="routing-matrix-box">
                             <div class="routing-data-labels">
                                 <div class="data-row">
                                     <span class="label-capital">Network:</span>
-                                    <span class="label-value">OnlyLuy-Direct (US-East)</span>
+                                    <span id="morph-network" class="label-value">OnlyLuy-Direct (US-East)</span>
                                 </div>
                                 <div class="data-row">
                                     <span class="label-capital">Speed:</span>
-                                    <span class="label-value secure">0.02s Settlement</span>
+                                    <span id="morph-speed" class="label-value secure">0.02s Settlement</span>
                                 </div>
                             </div>
                             <div class="embedded-qr-interaction">
@@ -173,7 +174,7 @@
         <div class="roadmap-sticky">
             <div class="roadmap-track">
                 <div class="progress-line-container">
-                    <div class="progress-line-fill"></div>
+                    <div id="progress-fill" class="progress-line-fill"></div>
                 </div>
 
                 <div class="roadmap-step active" data-step="0">
@@ -224,7 +225,7 @@
         </div>
     </div>
 
-    <div class="testimonials-wrapper" data-bg="4">
+    <div id="testimonials-wrapper" class="testimonials-wrapper" data-bg="4">
         <div class="testimonials-sticky">
             <div class="testimonials-bg-orbs">
                 <div class="orb orb-1"></div>
