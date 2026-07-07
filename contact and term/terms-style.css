@@ -26,7 +26,7 @@ body {
   cursor: url('/contact and term/asset/coin.png') 8 8, auto;
 }
 
-/* ===== HEADER ===== */
+/*Header*/
 .term-header {
   background-color: var(--color-black);
   color: var(--color-bg);
@@ -64,7 +64,7 @@ body {
   margin: 0 auto;
 }
 
-/* ===== BODY LAYOUT ===== */
+/*Body*/
 .term-body {
   max-width: 1100px;
   margin: 0 auto;
@@ -75,7 +75,7 @@ body {
   align-items: start;
 }
 
-/* ===== TABLE OF CONTENTS ===== */
+/*Content*/
 .term-toc.container {
   position: sticky;
   top: 2rem;
@@ -113,7 +113,7 @@ body {
   color: var(--color-blue);
 }
 
-/* ===== ARTICLE / TERMS CONTENT ===== */
+/*Article*/
 .term-article {
   display: flex;
   flex-direction: column;
@@ -169,7 +169,7 @@ body {
 }
 
 
-/* ===== RESPONSIVE ===== */
+/*Responsive*/
 @media (max-width: 800px) {
   .term-body {
     grid-template-columns: 1fr;

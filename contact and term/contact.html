@@ -27,16 +27,16 @@
             </ul>
         </nav>
     </header>
-
+    <main>
     <section class="contact-header">
         <div class="particles" id="particles"></div>
-        <p class="hero-eyebrow">Support &amp; Sales</p>
-        <h1 class="hero-heading" id="heroHeading">
-        <span class="hero-highlight">Payments made simple.</span><span class="hero-second-text">Questions answered faster.</span>
+        <p class="header-eyebrow">Support &amp; Sales</p>
+        <h1 class="header-heading" id="heroHeading">
+        <span class="header-highlight">Payments made simple.</span><span class="header-second-text">Questions answered faster.</span>
         </h1>
-        <div class="hero-subtext">
-        <p class="hero-subtext-1">&#9993;support@onlyluy.com</p>
-        <p class="hero-subtext-2">&#9742;+885 12 345 678</p>
+        <div class="header-subtext">
+        <p class="header-subtext-1">&#9993;support@onlyluy.com</p>
+        <p class="header-subtext-2">&#9742;+885 12 345 678</p>
         </div>
        </section>
     <div class="header-strip">
@@ -64,11 +64,11 @@
             </div>
             <div class="field">
                 <label for="email">Email Address</label>
-                <input type="email" id="email" placeholder="you@example.com" required />
+                <input type="email" id="email" placeholder="you@example.com" required autocomplete="on"/>
             </div>
             <div class="field">
                 <label for="subject">Subject</label>
-                <input type="text" id="subject" placeholder="What do you want to ask about?" />
+                <input type="text" id="subject" placeholder="What do you want to ask about?" required />
             </div>
             <div class="field">
                 <p style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; font-weight:600; margin-bottom:0.5rem;">I need help with</p>
@@ -85,7 +85,7 @@
             </div>
             <div class="field">
                 <label for="msg">Message</label>
-                <textarea id="msg" placeholder="Describe your issue or question. Include any transaction IDs if relevant..." required></textarea>
+                <textarea placeholder="Describe your issue or question. Include any transaction IDs if relevant..." required></textarea>
             </div>
             <button type="submit" class="btn-submit" id="submitBtn">
                 <span class="btn-text">Send Message</span>

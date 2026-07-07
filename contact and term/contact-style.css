@@ -24,7 +24,7 @@ body {
   cursor: url('/contact and term/asset/coin.png') 8 8, auto;
 }
 
-/* ===== HERO / HEADER ===== */
+/*Header*/
 .contact-header {
   position: relative;
   width:100%;
@@ -37,7 +37,7 @@ body {
   text-align: center;
   overflow: hidden;
 }
-.hero-highlight {
+.header-highlight {
   font-family: var(--font-display);
   background: linear-gradient(100deg, var(--color-yellow) 0%, gray 25%,var(--color-orange) 50%, gray 75%, var(--color-black) 100%);
   background-size: 300% 100%;
@@ -88,7 +88,7 @@ body {
   pointer-events: none;
 }
 
-.hero-eyebrow {
+.header-eyebrow {
   font-family: var(--font-display);
   font-size: 0.75rem;
   letter-spacing: 0.2em;
@@ -104,13 +104,13 @@ body {
   padding: 0.5rem;
   background-color: var(--color-black);
 }
-.hero-subtext {
+.header-subtext {
   display: flex;
   flex-direction: row;
   gap: 1rem;
 }
-.hero-subtext-1,
-.hero-subtext-2 {
+.header-subtext-1,
+.header-subtext-2 {
   font-family: var(--font-display);
   font-size: 0.75rem;
   letter-spacing: 0.2em;
@@ -121,26 +121,25 @@ body {
   border-radius: 999px;
   padding: 0.5rem;
   background-color: var(--color-blue);
-  color: black;
   color: var(--color-bg);
   transition: transform 0.2s ease, color 0.2s ease, background-color 0.5s ease;
 }
-.hero-subtext-2{
+.header-subtext-2{
   background-color: var(--color-orange);
 }
-.hero-subtext-1:hover {
+.header-subtext-1:hover {
   background-color: #1580C4;
   color: var(--color-yellow);
   cursor: pointer;
   transform: translateY(-2px);
 }
-.hero-subtext-2:hover {
+.header-subtext-2:hover {
   background-color: #CC6600;
   color: var(--color-yellow);
   cursor: pointer;
   transform: translateY(-2px);
 }
-.hero-heading {
+.header-heading {
   font-family: var(--font-display);
   font-size: clamp(2.5rem, 6vw, 4.5rem);
   letter-spacing: 0.02em;
@@ -153,7 +152,7 @@ body {
   margin: 0 auto;
 }
 
-.hero-second-text {
+.header-second-text {
   color: var(--color-blue);
 }
 .header-strip {
@@ -193,7 +192,7 @@ body {
   color: transparent;
   animation: sweep 3.5s ease-in-out infinite;
 }
-/* ===== FORM BODY ===== */
+/*Form Body*/
 .contact-body {
   background: var(--color-bg);
   padding: 4rem 1.5rem 6rem;
@@ -202,7 +201,7 @@ body {
   --color-blue: black;
   --color-orange: black;
   --color-yellow: black;
-  --color-black: white;
+  --color-black: #F5F0E8;
   max-width: 640px;
   margin: 40px auto;
   padding: 4rem 1.5rem 6rem;
@@ -214,7 +213,6 @@ body {
   transition: transform 1s ease, box-shadow 0.7s ease, background-color 1s ease;
 }
 .form-container:hover {
-  --color-bg: #F5F0E8;
   --color-black: #111111;
   --color-yellow: #FFD600;
   --color-blue: #1E9FE8;
@@ -277,7 +275,7 @@ body {
   border: 2px solid black;
   border-radius: 6px;
   background-color: var(--color-bg);
-  color: var(--color-black);
+  color: black;
   outline: none;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
@@ -298,7 +296,7 @@ body {
   min-height: 140px;
   resize: vertical;
 }
-.field, .form-row .field, .btn-submit {
+.field, .btn-submit {
   opacity: 0;
   transform: translateY(12px);
   animation: fieldIn 0.5s ease forwards;
@@ -314,7 +312,6 @@ body {
 @keyframes fieldIn {
   to { opacity: 1; transform: translateY(0); }
 }
-/* ===== RADIO GROUP ===== */
 .radio-group {
   display: flex;
   flex-wrap: wrap;
@@ -353,7 +350,7 @@ body {
   outline-offset: 2px;
 }
 
-/* ===== SUBMIT BUTTON ===== */
+/*Button*/
 .btn-submit {
   display: inline-flex;
   align-items: center;
@@ -391,17 +388,9 @@ body {
 .btn-submit:hover .btn-arrow {
   transform: translateX(4px);
 }
-
-
-@keyframes sweep {
-  0%   { background-position: 200% 0; }
-  100% { background-position: -100% 0; }
-}
-
-
-/* ===== RESPONSIVE ===== */
+/*Responsive*/
 @media (max-width: 640px) {
-  .hero-subtext {
+  .header-subtext {
     flex-direction: column;
     gap: 0.5rem;
   }
